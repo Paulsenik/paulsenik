@@ -1,10 +1,11 @@
-# Paulsen🙃
+<h1 align="center">Paulsen🙃</h1>
 
-### **[🌐Website](https://Paulsen.ooo)**<br>
-### **[🎶Soundboard](https://plattfis.ch)**<br>
-### **[🎧Music](https://music.paulsen.ooo)**<br>
-### **[📯Mail](mailto:mail@paulsen.ooo)**
-
+<div align="center">
+  <a href="https://Paulsen.ooo">🌐Website</a>
+  <a href="https://plattfis.ch">🎶Soundboard</a>
+  <a href="https://music.paulsen.ooo">🎧Music</a>
+  <a href="mailto:mail@paulsen.ooo">📯Mail</a>
+</div>
 
 <div align="center">
   <img width="600" src="https://streak-stats.demolab.com?user=realPaulsen&theme=violet-punch&hide_border=true&border_radius=15&date_format=j%20M%5B%20Y%5D"/>
