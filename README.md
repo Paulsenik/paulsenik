@@ -13,20 +13,22 @@
   <img width="500" src="https://github-readme-stats-beryl.vercel.app/api?username=realPaulsen&show_icons=true&theme=radical&hide_border=true"/>
 </div>
 
-<!-- github streak -->
-<div align="center">
-  <img width="500" src="https://streak-stats.demolab.com?user=realPaulsen&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
-</div>
-
 <!-- langs -->
 <div align="center">
-  <img width="400" src="https://github-readme-stats-beryl.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
+  <img width="500" src="https://github-readme-stats-beryl.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
 </div> 
 
 <!-- github Trophys -->
 <div align="center" >
-  <img width="400" href="paulsen.ooo" src="https://github-profile-trophy.vercel.app/?username=realPaulsen&column=4&no-frame=true&theme=radical"/>
+  <img width="500" href="paulsen.ooo" src="https://github-profile-trophy.vercel.app/?username=realPaulsen&column=4&no-frame=true&theme=radical"/>
 </div>
+
+<!-- github streak 
+<div align="center">
+  <img width="500" src="https://streak-stats.demolab.com?user=realPaulsen&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
+</div>
+
+-->
 
 
 
