@@ -8,24 +8,40 @@
   <a href="mailto:mail@paulsen.ooo">📯Mail</a>
 </div>
 
+<!-- stats -->
 <div align="center">
-  <img width="600" src="https://streak-stats.demolab.com?user=realPaulsen&theme=violet-punch&hide_border=true&border_radius=15&date_format=j%20M%5B%20Y%5D"/>
+  <img width="500" src="https://github-readme-stats-beryl.vercel.app/api?username=realPaulsen&show_icons=true&theme=radical&hide_border=true"/>
 </div>
 
+<!-- github streak -->
 <div align="center">
-  <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=vision-friendly-dark&hide_border=true&border_radius=15"/>
+  <img width="500" src="https://streak-stats.demolab.com?user=realPaulsen&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
 </div>
 
-<br>
+<!-- langs -->
+<div align="center">
+  <img width="400" src="https://github-readme-stats-beryl.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
+</div> 
 
-<p align="center"> 
-  Visitor count<br>
-  <img src="https://profile-counter.glitch.me/realPaulsen/count.svg" />
-</p>
+<!-- github Trophys -->
+<div align="center" >
+  <img width="400" href="paulsen.ooo" src="https://github-profile-trophy.vercel.app/?username=realPaulsen&column=4&no-frame=true&theme=radical"/>
+</div>
+
+
+
+
+
+
+<div align="center" >
+<img src="https://komarev.com/ghpvc/?username=realPaulsen&style=flat-square&color=blue" alt=""/>
+</div>
+
 
 
 <!--
-- I used: https://www.sitepoint.com/github-profile-readme/
-- https://streak-stats.demolab.com/demo/?user=realPaulsen&theme=violet-punch&hide_border=true&border_radius=15&locale=en&date_format=j+M%5B+Y%5D&mode=daily&properties=background
-- https://github-readme-stats.vercel.app/
+- https://www.sitepoint.com/github-profile-readme/
+- https://streak-stats.demolab.com/demo/
+- https://github-readme-stats-beryl.vercel.app/
+- https://github.com/ryo-ma/github-profile-trophy
 -->
