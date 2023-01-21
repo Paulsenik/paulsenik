@@ -29,6 +29,7 @@ mkdir -p $folderPictures
 mkdir -p $folderInstalls
 ## Clone
 cd $folderInstalls
+rm -rf realPaulsen
 git clone https://github.com/realPaulsen/realPaulsen.git
 cp -rf realPaulsen/* ${HOME}
 
