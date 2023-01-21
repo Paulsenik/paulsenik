@@ -1,35 +1,43 @@
 #!/bin/bash
 
-# Paulsen's Ubuntu/Debian-Installscript #
+# Paulsen's Ubuntu/Debian Programm-Installscript #
+# Mainly used for already existing KDE-installation
+# Installs my main programms with minimal configs
 #
 # https://paulsen.ooo
 # mail@paulsen.ooo
 
+
 # Variables:
+## Colors
 Color_Off='\033[0m'
 BPurple='\033[1;35m'
 BBlue='\033[1;34m'
-
+## other
+folderPictures="${HOME}/Pictures"
+folderDocuments="${HOME}/Documents"
+folderInstalls="${HOME}/Installs"
 ## programms
-Toolbox='jetbrains-toolbox-1.27.2.13.801' #-- https://www.jetbrains.com/toolbox-app/download/other.html
+Toolbox='jetbrains-toolbox-1.27.2.13801' #--version: https://www.jetbrains.com/toolbox-app/download/other.html
 
 
+# Start
+echo -e "\n${BPurple}*----<[ Start setup ]>----*${Color_Off}\n"
+## Setup
+mkdir -p $folderDocuments
+mkdir -p $folderPictures
+mkdir -p $folderInstalls
+## Clone
+cd $folderInstalls
+git clone https://github.com/realPaulsen/realPaulsen.git
+cp -rf realPaulsen/* ${HOME}
 
-echo -e "\n${BPurple}----<[ Start setup ]>----*${Color_Off}\n"
-
-
-#-- Go to Installs
-cd ~
-mkdir -p Installs
-cd Installs
-
-
-
-echo -e "\n${BPurple}> Adding 3rd party repos <${Color_Off}\n"
+echo -e "${BPurple}> Adding 3rd party repos <${Color_Off}\n"
 
 # Repos
 sudo add-apt-repository ppa:flatpak/stable -y
 sudo add-apt-repository ppa:agornostal/ulauncher -y
+sudo add-apt-repository multiverse -y
 
 ## Updating
 echo -e "\n\n${BBlue}>> Updating.. <<  ${Color_Off}\n"
@@ -60,9 +68,13 @@ sudo apt install kdeconnect -y
 sudo apt install timeshift -y
 
 ### apt
-sudo apt install ulauncher -y
-sudo apt install kwin-bismuth -y
 sudo apt install default-jre default-jdk -y
+sudo apt install ulauncher -y
+sudo apt install wmctrl -y #-- Ulauncher-toggle option
+sudo apt install kwin-bismuth -y
+#### Fonts
+sudo apt install ttf-mscorefonts-installer -y
+sudo fc-cache -f -v
 
 
 echo -e "\n\n${BBlue}>> Flatpak << ${Color_Off}\n"
@@ -85,14 +97,18 @@ flatpak install org.telegram.desktop -y
 echo -e "\n\n${BBlue}>> Other << ${Color_Off}\n"
 ## Manual Download
 
-wget -nv -nc --show-progress --progress="bar" "https://download.jetbrains.com/toolbox/$Toolbox.tar.gz"
-tar -xf $Toolbox.tar.gz
-cd $Toolbox
-./jetbrains-toolbox
-cd ..
+#-- Go to Installs
+cd $folderInstalls
 
-# Configs
-echo -e "\n\n${BPurple}> Configs < ${Color_Off}\n"
-echo ">TODO<"
+wget -nv -nc --show-progress --progress="bar" "https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz"
+tar -xf ${Toolbox}.tar.gz
+cd $Toolbox
+./jetbrains-toolbox --minimize
+
+echo -e "\n\n${BPurple}Things ToDo manually: ${Color_Off}\n"
+echo -e "${BBlue}Set wallpaper from ${folderPictures}"
+echo -e "${BBlue}If you are using KDE, import ${BPurple}kde-shortcuts.kksrc ${BBlue}into Settings/Shortcuts."
+
+
 
 exit

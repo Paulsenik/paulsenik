@@ -1,0 +1,11 @@
+# Log file
+*.log
+log_*
+
+# Projects
+*.classpath
+*.project
+*.iml
+.idea
+
+/.idea/

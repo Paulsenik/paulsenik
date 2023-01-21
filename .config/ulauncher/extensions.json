@@ -1,0 +1,58 @@
+{
+    "com.github.mikebarkmin.ulauncher-duckduckgo": {
+        "id": "com.github.mikebarkmin.ulauncher-duckduckgo",
+        "url": "https://github.com/mikebarkmin/ulauncher-duckduckgo",
+        "updated_at": "2022-09-17T19:21:18.353827",
+        "last_commit": "f2ea6a187082c600a59acc9cca6e288d96f66cc0",
+        "last_commit_time": "2021-08-07T18:51:44"
+    },
+    "com.github.ulauncher.ulauncher-emoji": {
+        "id": "com.github.ulauncher.ulauncher-emoji",
+        "url": "https://github.com/Ulauncher/ulauncher-emoji",
+        "updated_at": "2022-09-17T19:21:56.387344",
+        "last_commit": "4c6af50d1c9a24d5aad2c597634ff0c634972a5c",
+        "last_commit_time": "2021-08-08T19:19:59"
+    },
+    "com.github.mikebarkmin.ulauncher-obsidian": {
+        "id": "com.github.mikebarkmin.ulauncher-obsidian",
+        "url": "https://github.com/mikebarkmin/ulauncher-obsidian",
+        "updated_at": "2022-09-17T19:23:00.134407",
+        "last_commit": "1da31425580691328745826376434b3cff69ffcf",
+        "last_commit_time": "2022-06-03T10:38:34"
+    },
+    "com.github.isacikgoz.ukill": {
+        "id": "com.github.isacikgoz.ukill",
+        "url": "https://github.com/isacikgoz/ukill",
+        "updated_at": "2022-09-17T19:23:12.400463",
+        "last_commit": "bc50d9f41d46b6813a5aeebddd15734dcdb9d8db",
+        "last_commit_time": "2019-05-28T18:30:00"
+    },
+    "com.github.tjquillan.ulauncher-system": {
+        "id": "com.github.tjquillan.ulauncher-system",
+        "url": "https://github.com/tjquillan/ulauncher-system",
+        "updated_at": "2022-09-17T19:23:36.959838",
+        "last_commit": "667613bf7bb6b4affa4f2121b58589477cd89829",
+        "last_commit_time": "2021-11-08T18:16:55"
+    },
+    "com.github.episode6.ulauncher-system-management-direct": {
+        "id": "com.github.episode6.ulauncher-system-management-direct",
+        "url": "https://github.com/episode6/ulauncher-system-management-direct",
+        "updated_at": "2022-09-17T19:34:44.761690",
+        "last_commit": "c6c0febff9eae884e4a8bc97d057480436fb5c9b",
+        "last_commit_time": "2020-07-22T18:41:36"
+    },
+    "com.github.ulauncher.ulauncher-timer": {
+        "id": "com.github.ulauncher.ulauncher-timer",
+        "url": "https://github.com/ulauncher/ulauncher-timer",
+        "updated_at": "2022-09-17T19:34:50.250361",
+        "last_commit": "4262fc24db08610d01ea311d2e12f22588c98886",
+        "last_commit_time": "2020-11-03T07:21:30"
+    },
+    "com.github.qcasey.ulauncher-homeassistant": {
+        "id": "com.github.qcasey.ulauncher-homeassistant",
+        "url": "https://github.com/qcasey/ulauncher-homeassistant",
+        "updated_at": "2022-12-11T10:21:45.687559",
+        "last_commit": "8a187aa6bdff8700cdbfbc0371b98dda33b253d5",
+        "last_commit_time": "2021-05-24T23:54:58"
+    }
+}

@@ -1,0 +1,22 @@
+[Desktop Entry]
+Categories=Media
+Comment[de_DE]=paulsen.ooo
+Comment=paulsen.ooo
+Exec=java -jar /home/paulsen/.jaudiocontroller/AudioController_v2.0.0.jar
+GenericName[de_DE]=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
+GenericName=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
+Icon=/home/paulsen/.jaudiocontroller/Icon.png
+MimeType=
+Name[de_DE]=JAudioController
+Name=JAudioController
+Path=/home/paulsen/.jaudiocontroller/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=2.2.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-KDE-autostart-after=panel

@@ -1,3 +1,6 @@
+<!-- realPaulsens Github-Profile with linux-install-script -->
+
+
 <h1 align="center">Paulsen🙃</h1>
 
 <div align="center">
@@ -39,6 +42,18 @@
 <img src="https://komarev.com/ghpvc/?username=realPaulsen&style=flat-square&color=blue" alt=""/>
 </div>
 
+<div align="center" >
+<details close>
+<summary>Linux-Install-Script</summary>
+<br>
+Install my Linux-Programms & Configs:
+
+```bash
+exec wget -q -O - https://raw.githubusercontent.com/realPaulsen/realPaulsen/main/linuxSetup.bash | bash
+```
+
+</details>
+</div>
 
 
 <!--

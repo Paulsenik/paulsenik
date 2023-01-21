@@ -1,0 +1,42 @@
+{
+    "0a6ee8f7-399f-4180-8d68-825871b3ea72": {
+        "id": "0a6ee8f7-399f-4180-8d68-825871b3ea72",
+        "name": "xkill",
+        "keyword": "xkill",
+        "cmd": "xkill",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1663435156.6972716
+    },
+    "ec807082-ec21-43a4-97ad-4c672deebde4": {
+        "id": "ec807082-ec21-43a4-97ad-4c672deebde4",
+        "name": "Deck",
+        "keyword": "deck",
+        "cmd": "https://cloud.seidel-paul.eu/apps/deck/",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1665844938.4038653
+    },
+    "f05f73de-abec-47ce-903a-c6933962ce2b": {
+        "id": "f05f73de-abec-47ce-903a-c6933962ce2b",
+        "name": "Calendar",
+        "keyword": "Calendar",
+        "cmd": "https://cloud.seidel-paul.eu/apps/calendar/timeGridWeek/now",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1665844965.4454036
+    },
+    "a9ab1b5d-ea4f-41a3-b8dd-0bdd395ea599": {
+        "id": "a9ab1b5d-ea4f-41a3-b8dd-0bdd395ea599",
+        "name": "FS",
+        "keyword": "fs",
+        "cmd": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/files/?dir=/&fileid=2283946",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1668265946.440532
+    }
+}
