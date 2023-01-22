@@ -40,9 +40,6 @@ sudo add-apt-repository multiverse -y
 echo -e "\n\n${BPurple}> Updating.. <  ${Color_Off}\n"
 # Updating
 sudo apt update -y
-pkcon update
-sudo dpkg --configure -a
-sudo apt full-upgrade
 
 
 
