@@ -27,11 +27,6 @@ echo -e "\n${BPurple}*----<[ Start setup ]>----*${Color_Off}\n"
 mkdir -p $folderDocuments
 mkdir -p $folderPictures
 mkdir -p $folderInstalls
-## Clone
-cd $folderInstalls
-rm -rf realPaulsen
-git clone https://github.com/realPaulsen/realPaulsen.git
-cp -rf realPaulsen/* ${HOME}
 
 echo -e "${BPurple}> Adding 3rd party repos <${Color_Off}\n"
 
@@ -40,14 +35,18 @@ sudo add-apt-repository ppa:flatpak/stable -y
 sudo add-apt-repository ppa:agornostal/ulauncher -y
 sudo add-apt-repository multiverse -y
 
-## Updating
-echo -e "\n\n${BBlue}>> Updating.. <<  ${Color_Off}\n"
+
+
+echo -e "\n\n${BPurple}> Updating.. <  ${Color_Off}\n"
+# Updating
 sudo apt update -y
+pkcon update
+sudo dpkg --configure -a
+sudo apt full-upgrade
 
 
 
 echo -e "\n\n${BPurple}> Setting up Discover.. < ${Color_Off}\n"
-
 # Discover
 sudo apt install discover -y
 sudo apt install flatpak -y
@@ -70,12 +69,13 @@ sudo apt install timeshift -y
 
 ### apt
 sudo apt install default-jre default-jdk -y
+sudo apt install pip3 -y
 sudo apt install ulauncher -y
 sudo apt install wmctrl -y #-- Ulauncher-toggle option
 sudo apt install kwin-bismuth -y
-#### Fonts
-sudo apt install ttf-mscorefonts-installer -y
-sudo fc-cache -f -v
+#### Fonts (Causes problems on new installs)
+#-- sudo apt install ttf-mscorefonts-installer -y
+#-- sudo fc-cache -f -v
 
 
 echo -e "\n\n${BBlue}>> Flatpak << ${Color_Off}\n"
@@ -98,18 +98,29 @@ flatpak install org.telegram.desktop -y
 echo -e "\n\n${BBlue}>> Other << ${Color_Off}\n"
 ## Manual Download
 
-#-- Go to Installs
-cd $folderInstalls
+### Ulauncher
+pip3 install requests --user
 
+### Jetbrains-Toolbox
+cd $folderInstalls
 wget -nv -nc --show-progress --progress="bar" "https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz"
 tar -xf ${Toolbox}.tar.gz
 cd $Toolbox
 ./jetbrains-toolbox --minimize
 
+
+echo -e "\n\n${BPurple}> Configs < ${Color_Off}\n"
+# Config & Files
+cd $folderInstalls
+rm -rf realPaulsen
+git clone https://github.com/realPaulsen/realPaulsen.git
+cp -rf realPaulsen/* ${HOME}
+
+
+# Info
 echo -e "\n\n${BPurple}Things ToDo manually: ${Color_Off}\n"
 echo -e "${BBlue}Set wallpaper from ${folderPictures}"
 echo -e "${BBlue}If you are using KDE, import ${BPurple}kde-shortcuts.kksrc ${BBlue}into Settings/Shortcuts."
-
 
 
 exit
