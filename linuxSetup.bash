@@ -69,7 +69,7 @@ sudo apt install timeshift -y
 
 ### apt
 sudo apt install default-jre default-jdk -y
-sudo apt install pip3 -y
+sudo apt install python3-pip -y
 sudo apt install ulauncher -y
 sudo apt install wmctrl -y #-- Ulauncher-toggle option
 sudo apt install kwin-bismuth -y
