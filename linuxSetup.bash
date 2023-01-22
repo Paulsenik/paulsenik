@@ -17,6 +17,7 @@ BBlue='\033[1;34m'
 folderPictures="${HOME}/Pictures"
 folderDocuments="${HOME}/Documents"
 folderInstalls="${HOME}/Installs"
+folderCode="${HOME}/Code"
 ## programms
 Toolbox='jetbrains-toolbox-1.27.2.13801' #--version: https://www.jetbrains.com/toolbox-app/download/other.html
 
@@ -27,6 +28,7 @@ echo -e "\n${BPurple}*----<[ Start setup ]>----*${Color_Off}\n"
 mkdir -p $folderDocuments
 mkdir -p $folderPictures
 mkdir -p $folderInstalls
+mkdir -p $folderCode
 
 echo -e "${BPurple}> Adding 3rd party repos <${Color_Off}\n"
 
@@ -59,12 +61,13 @@ echo -e "${BBlue}>> APT-Packages << ${Color_Off}\n"
 ### jetbrains toolbox-app
 sudo apt install libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfig libgtk-3-bin -y
 
-### apt-get
+### Yubikey
+sudo apt install libpam-yubico libpam-u2f ykls yubikey-luks yubikey-manager yubikey-personalization yubikey-personalization-gui scdaemon -y
+
+### apt
 sudo apt install firefox -y
 sudo apt install kdeconnect -y
 sudo apt install timeshift -y
-
-### apt
 sudo apt install default-jre default-jdk -y
 sudo apt install python3-pip -y
 sudo apt install ulauncher -y
@@ -117,7 +120,7 @@ cp -rf realPaulsen/* ${HOME}
 # Info
 echo -e "\n\n${BPurple}Things ToDo manually: ${Color_Off}\n"
 echo -e "${BBlue}Set wallpaper from ${folderPictures}"
-echo -e "${BBlue}If you are using KDE, import ${BPurple}kde-shortcuts.kksrc ${BBlue}into Settings/Shortcuts."
+echo -e "${BBlue}If you are using KDE apply settings from ~/.config/REAMDE.md and import ${BPurple}kde-shortcuts.kksrc ${BBlue}into Settings/Shortcuts."
 
 
 exit
