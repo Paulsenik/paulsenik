@@ -13,12 +13,12 @@
 
 <!-- stats -->
 <div align="center">
-  <img width="500" src="https://github-readme-stats-beryl.vercel.app/api?username=realPaulsen&show_icons=true&theme=radical&hide_border=true"/>
+  <img width="500" src="https://github-readme-stats.vercel.app/api?username=realPaulsen&show_icons=true&theme=radical&hide_border=true"/>
 </div>
 
 <!-- langs -->
 <div align="center">
-  <img width="500" src="https://github-readme-stats-beryl.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
+  <img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
 </div> 
 
 <!-- github Trophys -->
