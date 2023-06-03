@@ -80,19 +80,19 @@ sudo apt install kwin-bismuth -y
 
 echo -e "\n\n${BBlue}>> Flatpak << ${Color_Off}\n"
 ## flatpak
-flatpak install com.discordapp.Discord -y
-flatpak install com.github.Eloston.UngoogledChromium -y
-flatpak install com.github.tchx84.Flatseal -y
-flatpak install com.nextcloud.desktopclient.nextcloud -y
-flatpak install im.riot.Riot -y
-flatpak install md.obsidian.Obsidian -y
-flatpak install org.kde.filelight -y
-flatpak install org.kde.kcalc -y
-flatpak install org.kde.kcolorchooser -y
-flatpak install org.kde.krita -y
-flatpak install org.mozilla.Thunderbird -y
-flatpak install org.onlyoffice.desktopeditors -y
-flatpak install org.telegram.desktop -y
+flatpak install com.discordapp.Discord -y --noninteractive
+flatpak install com.github.Eloston.UngoogledChromium -y --noninteractive
+flatpak install com.github.tchx84.Flatseal -y --noninteractive
+flatpak install com.nextcloud.desktopclient.nextcloud -y --noninteractive
+flatpak install im.riot.Riot -y --noninteractive
+flatpak install md.obsidian.Obsidian -y --noninteractive
+flatpak install org.kde.filelight -y --noninteractive
+flatpak install org.kde.kcalc -y --noninteractive
+flatpak install org.kde.kcolorchooser -y --noninteractive
+flatpak install org.kde.krita -y --noninteractive
+flatpak install org.mozilla.Thunderbird -y --noninteractive
+flatpak install org.onlyoffice.desktopeditors -y --noninteractive
+flatpak install org.telegram.desktop -y --noninteractive
 
 
 echo -e "\n\n${BBlue}>> Other << ${Color_Off}\n"
