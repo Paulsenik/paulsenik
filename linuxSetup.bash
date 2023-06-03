@@ -58,7 +58,7 @@ echo -e "${BBlue}>> APT-Packages << ${Color_Off}\n"
 
 ## apt
 
-### jetbrains toolbox-app
+### jetbrains toolbox-app dependencies
 sudo apt install libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfig libgtk-3-bin -y
 
 ### Yubikey
@@ -72,7 +72,6 @@ sudo apt install default-jre default-jdk -y
 sudo apt install python3-pip -y
 sudo apt install ulauncher -y
 sudo apt install wmctrl -y #-- Ulauncher-toggle option
-sudo apt install kwin-bismuth -y
 #### Fonts (Causes problems on new installs)
 #-- sudo apt install ttf-mscorefonts-installer -y
 #-- sudo fc-cache -f -v
@@ -93,6 +92,7 @@ flatpak install org.kde.krita -y --noninteractive
 flatpak install org.mozilla.Thunderbird -y --noninteractive
 flatpak install org.onlyoffice.desktopeditors -y --noninteractive
 flatpak install org.telegram.desktop -y --noninteractive
+flatpak install com.spotify.Client -y --noninteractive
 
 
 echo -e "\n\n${BBlue}>> Other << ${Color_Off}\n"
@@ -124,3 +124,4 @@ echo -e "${BBlue}If you are using KDE apply settings from ~/.config/REAMDE.md an
 
 
 exit
+
