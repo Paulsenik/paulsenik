@@ -1,6 +1,3 @@
-[KDE Keyboard Layout Switcher][Global Shortcuts]
-Switch to Next Keyboard Layout=Meta+Alt+K
-
 [StandardShortcuts]
 ConfigureNotifications=
 ConfigureToolbars=
@@ -11,8 +8,10 @@ SwitchApplicationLanguage=
 
 [khotkeys][Global Shortcuts]
 {7d7d94ac-fcd9-454d-b377-3651e4e40b57}=Meta+Shift+Return
-{91cd1dfb-617d-4e41-bd59-ef134a9841d2}=Ctrl+Alt+L
+{91cd1dfb-617d-4e41-bd59-ef134a9841d2}=Alt+Space
+{91eda731-0f86-41a5-b94b-0cbaa92419fe}=Meta+Shift+Return
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=
+{e120e82b-3688-44a9-97b1-4ebcc7edbf85}=Ctrl+Alt+L
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=
@@ -24,6 +23,7 @@ Reboot Without Confirmation=
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Meta+Ctrl+A
 Decrease Opacity=
+Edit Tiles=Meta+T
 Expose=
 ExposeAll=
 ExposeClass=
@@ -58,8 +58,9 @@ Krohnkite: Shrink Width=Meta+H
 Krohnkite: Spread Layout=Meta+Shift+S
 Krohnkite: Stair Layout=
 Krohnkite: Three Column Layout=
-Krohnkite: Tile Layout=Meta+Shift+T
+Krohnkite: Tile Layout=
 Krohnkite: Up/Prev=Meta+K
+Move Tablet to Next Output=
 MoveMouseToCenter=Meta+F6
 MoveMouseToFocus=Meta+F5
 MoveZoomDown=
@@ -111,6 +112,10 @@ Switch to Screen 4=
 Switch to Screen 5=
 Switch to Screen 6=
 Switch to Screen 7=
+Switch to Screen Above=
+Switch to Screen Below=
+Switch to Screen to the Left=
+Switch to Screen to the Right=
 Toggle Night Color=
 Toggle Window Raise/Lower=
 Walk Through Desktop List=
@@ -127,7 +132,7 @@ Walk Through Windows of Current Application Alternative=
 Walk Through Windows of Current Application Alternative (Reverse)=
 Window Above Other Windows=
 Window Below Other Windows=
-Window Close=Alt+F4; Meta+Shift+C
+Window Close=Meta+Shift+C; Alt+F4
 Window Fullscreen=
 Window Grow Horizontal=
 Window Grow Vertical=
@@ -144,6 +149,10 @@ Window One Desktop Down=
 Window One Desktop Up=
 Window One Desktop to the Left=
 Window One Desktop to the Right=
+Window One Screen Down=
+Window One Screen Up=
+Window One Screen to the Left=
+Window One Screen to the Right=
 Window Operations Menu=Alt+F3
 Window Pack Down=
 Window Pack Left=
@@ -186,6 +195,7 @@ Window to Next Desktop=Meta+Shift+Right
 Window to Next Screen=Meta+Shift+Up
 Window to Previous Desktop=Meta+Shift+Left
 Window to Previous Screen=Meta+Shift+Down
+Window to Screen %1=
 Window to Screen 0=Meta+Shift+U
 Window to Screen 1=Meta+Shift+I
 Window to Screen 2=Meta+Shift+O
@@ -233,15 +243,19 @@ view_actual_size=Meta+0
 view_zoom_in=Meta++
 view_zoom_out=Meta+-
 
+[org.kde.krunner.desktop][Global Shortcuts]
+RunClipboard=Alt+Shift+F2
+_launch=Alt+F2
+
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=
 
 [org_kde_powerdevil][Global Shortcuts]
 Decrease Keyboard Brightness=Keyboard Brightness Down
-Decrease Screen Brightness=Monitor Brightness Down; Meta+Alt+Down
+Decrease Screen Brightness=Meta+Alt+Down; Monitor Brightness Down
 Hibernate=Hibernate
 Increase Keyboard Brightness=Keyboard Brightness Up
-Increase Screen Brightness=Meta+Alt+Up; Monitor Brightness Up
+Increase Screen Brightness=Monitor Brightness Up; Meta+Alt+Up
 PowerDown=Power Down
 PowerOff=Power Off
 Sleep=Sleep
@@ -259,7 +273,12 @@ activate task manager entry 6=
 activate task manager entry 7=
 activate task manager entry 8=
 activate task manager entry 9=
+activate widget 25=
 activate widget 26=Alt+F1
+activate widget 34=
+activate widget 37=
+activate widget 41=
+activate widget 5=
 clear-history=
 clipboard_action=
 cycle-panels=
@@ -274,6 +293,6 @@ show dashboard=
 show-barcode=
 show-on-mouse-pos=Meta+V
 stop current activity=
-switch to next activity=
-switch to previous activity=
+switch to next activity=Meta+Alt+Right
+switch to previous activity=Meta+Alt+Left
 toggle do not disturb=
