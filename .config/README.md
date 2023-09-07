@@ -1,4 +1,4 @@
-# Paulsens KDE-Settings
+# Paulsenik KDE-Settings
 
 ## Appearance
 - Global Theme: BreezeDark

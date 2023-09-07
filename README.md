@@ -1,10 +1,10 @@
-<!-- realPaulsens Github-Profile with linux-install-script -->
+<!-- Paulsenik Github-Profile with linux-install-script -->
 
 
-<h1 align="center">Paulsen🙃</h1>
+<h1 align="center">Paulsenik🙃</h1>
 
 <div align="center">
-  <a href="https://Paulsen.ooo">🌐Website</a>
+  <a href="https://Paulsenik.de">🌐Website</a>
   <a href="https://realpaulsen.itch.io">🎮Itch.io</a>
   <a href="https://sounds.plattfis.ch">🎶Soundboard</a>
   <a href="https://music.paulsen.ooo">🎧Music</a>
