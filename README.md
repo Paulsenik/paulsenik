@@ -3,11 +3,11 @@
 <h1 align="center">Paulsenik🙃</h1>
 
 <div align="center">
-  <a href="https://Paulsenik.de">🌐Website</a>
+  <a href="https://paulsenik.de">🌐Website</a>
   <a href="https://realpaulsen.itch.io">🎮Itch.io</a>
   <a href="https://sounds.plattfis.ch">🎶Soundboard</a>
   <a href="https://music.paulsen.ooo">🎧Music</a>
-  <a href="mailto:mail@paulsen.ooo">📯Mail</a>
+  <a href="mailto:mail@paulsenik.de">📯Mail</a>
 </div>
 
 <!-- stats -->
@@ -48,7 +48,7 @@
 Install my Linux-Programms & Configs:
 
 ```bash
-exec wget -q -O - https://raw.githubusercontent.com/realPaulsen/realPaulsen/main/linuxSetup.bash | bash
+exec wget -q -O - https://raw.githubusercontent.com/paulsenik/realPaulsen/main/linuxSetup.bash | bash
 ```
 
 </details>
