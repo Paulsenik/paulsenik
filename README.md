@@ -4,60 +4,26 @@
 
 <div align="center">
   <a href="https://paulsenik.de">🌐Website</a>
-  <a href="https://realpaulsen.itch.io">🎮Itch.io</a>
-  <a href="https://sounds.plattfis.ch">🎶Soundboard</a>
-  <a href="https://music.paulsen.ooo">🎧Music</a>
+  <a href="https://paulsenik.itch.io">🎮Itch.io</a>
+  <a href="https://music.paulsenik.de">🎧Music</a>
   <a href="mailto:mail@paulsenik.de">📯Mail</a>
 </div>
-
-<!-- stats -->
+<br>
 <div align="center">
-  <img width="500" src="https://github-readme-stats.vercel.app/api?username=realPaulsen&show_icons=true&theme=radical&hide_border=true"/>
-</div>
-
-<!-- langs -->
-<div align="center">
-  <img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=realPaulsen&layout=compact&theme=radical&hide_border=true"/>
-</div> 
-
-<!-- github Trophys -->
-<div align="center" >
-  <img width="500" href="paulsen.ooo" src="https://github-profile-trophy.vercel.app/?username=realPaulsen&column=4&no-frame=true&theme=radical"/>
-</div>
-
-<!-- github streak 
--->
-<div align="center">
-  <img width="500" src="https://streak-stats.demolab.com?user=realPaulsen&theme=radical&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
-</div>
-
-
-
-
-
-
-
-<div align="center" >
-<img src="https://komarev.com/ghpvc/?username=realPaulsen&style=flat-square&color=blue" alt=""/>
+<a href="https://sounds.plattfis.ch">🎶Soundboard</a>
 </div>
 
 <div align="center" >
 <details close>
 <summary>Linux-Install-Script</summary>
 <br>
-Install my Linux-Programms & Configs:
+Install My Programms & Configs:
 
 ```bash
 exec wget -q -O - https://raw.githubusercontent.com/paulsenik/realPaulsen/main/linuxSetup.bash | bash
 ```
 
+[Script](linuxSetup.bash)
+
 </details>
 </div>
-
-
-<!--
-- https://www.sitepoint.com/github-profile-readme/
-- https://streak-stats.demolab.com/demo/
-- https://github-readme-stats-beryl.vercel.app/
-- https://github.com/ryo-ma/github-profile-trophy
--->
