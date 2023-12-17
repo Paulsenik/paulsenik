@@ -1,0 +1,23 @@
+[Desktop Entry]
+Categories=Media
+Comment[en_GB]=paulenik.de
+Comment=paulenik.de
+Exec=java -jar /home/paulsen/.ryolith/ryolith.jar
+GenericName[en_GB]=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
+GenericName=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
+GenericName[de_DE]=Verwaltet alle Audioprozesse verschiedener Programme. Einzelne Programme können in einer eigenen Lautstärkeregelung gruppiert werden.
+Icon=/home/paulsen/.ryolith/Icon.png
+MimeType=
+Name[en_GB]=Ryolith
+Name=Ryolith
+Path=/home/paulsen/.ryolith/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=2.0.1
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-KDE-autostart-after=panel
