@@ -110,12 +110,14 @@ git clone https://github.com/paulsenik/paulsenik.git
 cp -r -u ${folderRepo}/.config/ulauncher ${HOME}/.config
 ## Ryolith
 cp -r -u ${folderRepo}/.ryolith ${HOME}
-## Desktop-Links
-cp -r -u ${folderRepo}/.local/share/applications/ ${HOME}/.local/share/
-###- change Desktop-Links (https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands)
-sed -i "s/HOME/\/home\/${USER}/g" ${HOME}/.local/share/Ryolith.desktop
 ## Konsole
 cp -r -u ${folderRepo}/.local/share/konsole/ ${HOME}/.local/share/
+
+## Desktop-Links
+cp -r -u ${folderRepo}/.local/share/applications/ ${HOME}/.local/share/
+##- change Desktop-Links (https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands)
+##- Replaces _HOME_ with actual home-folder
+sed -i "s/_HOME_/\/home\/${USER}/g" ${HOME}/.local/share/applications/*
 
 
 ## KDE
