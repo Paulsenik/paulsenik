@@ -20,9 +20,9 @@ folderInstalls="${HOME}/Installs"
 folderCode="${HOME}/Dev"
 folderRepo="$folderInstalls/paulsenik"
 ## programms
+Toolbox="jetbrains-toolbox-2.1.2.18853"
+Link_Toolbox="https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz" #--version: https://www.jetbrains.com/toolbox-app/download/other.html
 Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6_all.deb"
-Link_Toolbox="https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.27.2.13801.tar.gz" #--version: https://www.jetbrains.com/toolbox-app/download/other.html
-
 
 # Start
 echo -e "\n${BPurple}*----<[ Start setup ]>----*${Color_Off}\n"
@@ -107,10 +107,15 @@ rm -rf paulsenik
 git clone https://github.com/paulsenik/paulsenik.git
 
 ## Ulauncher
-cp -r ${folderRepo}/.config/ulauncher ${HOME}/.config
+cp -r -u ${folderRepo}/.config/ulauncher ${HOME}/.config
 ## Ryolith
-cp -r ${folderRepo}/.ryolith ${HOME}
-cp -r ${folderRepo}/.local/share/applications/Ryolith.desktop ${HOME}/.local/share/applications/
+cp -r -u ${folderRepo}/.ryolith ${HOME}
+## Desktop-Links
+cp -r -u ${folderRepo}/.local/share/applications/ ${HOME}/.local/share/
+###- change Desktop-Links (https://askubuntu.com/questions/20414/find-and-replace-text-within-a-file-using-commands)
+sed -i "s/HOME/\/home\/${USER}/g" ${HOME}/.local/share/Ryolith.desktop
+## Konsole
+cp -r -u ${folderRepo}/.local/share/konsole/ ${HOME}/.local/share/
 
 
 ## KDE
@@ -121,7 +126,7 @@ if command -v kwriteconfig5 >/dev/null 2>&1; then
   kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" --group 'Containments' --group '1' --group 'Wallpaper' --group 'org.kde.image' --group 'General' --key 'Image' "$folderInstalls/paulsenik/Pictures/Profile/Phoenix 1.0/phoenix_v1.0_UHD-2.png"
 
 else
-  echo "${BBlue}no kde5-installation found!"
+  echo "${BBlue}No kde5-installation found!"
 fi
 
 
