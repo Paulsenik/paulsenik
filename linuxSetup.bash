@@ -21,8 +21,11 @@ folderCode="${HOME}/Dev"
 folderRepo="$folderInstalls/paulsenik"
 ## programms
 Toolbox="jetbrains-toolbox-2.1.2.18853"
+KrohnkiteV="0.8.1"
 Link_Toolbox="https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz" #--version: https://www.jetbrains.com/toolbox-app/download/other.html
+Link_Krohnkite="https://github.com/esjeon/krohnkite/releases/download/v${KrohnkiteV}/krohnkite-${KrohnkiteV}.kwinscript"
 Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6_all.deb"
+
 
 # Start
 echo -e "\n${BPurple}*----<[ Start setup ]>----*${Color_Off}\n"
@@ -120,12 +123,21 @@ cp -r -u ${folderRepo}/.local/share/applications/ ${HOME}/.local/share/
 sed -i "s/_HOME_/\/home\/${USER}/g" ${HOME}/.local/share/applications/*
 
 
-## KDE
+## KDE (check if kde5)
 if command -v kwriteconfig5 >/dev/null 2>&1; then
   echo -e "\n\n${BPurple}Setting kde5-configs: ${Color_Off}\n"
   echo -e "${BBlue}import ${BPurple}kde-shortcuts.kksrc ${BBlue}into Settings/Shortcuts.${Color_Off}"
 
+  ### Background
   kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" --group 'Containments' --group '1' --group 'Wallpaper' --group 'org.kde.image' --group 'General' --key 'Image' "$folderInstalls/paulsenik/Pictures/Profile/Phoenix 1.0/phoenix_v1.0_UHD-2.png"
+
+  ### Krohnkite
+  cd $folderInstalls
+  wget -nv -nc --show-progress --progress="bar" $Link_Krohnkite
+  plasmapkg2 -t kwinscript -i "krohnkite-${KrohnkiteV}.kwinscript"
+  ###- Enable User Config
+  mkdir -p "$HOME/.local/share/kservices5/"
+  ln -s "$HOME/.local/share/kwin/scripts/krohnkite/metadata.desktop" "$HOME/.local/share/kservices5/krohnkite.desktop"
 
 else
   echo "${BBlue}No kde5-installation found!"
