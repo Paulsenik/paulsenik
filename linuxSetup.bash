@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Paulsen's Debian Installscript #
+# Paulsenik's Debian Installscript #
 # Normally used for existing KDE-installation
 # Installs my main programms with minimal configs
 #

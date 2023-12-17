@@ -20,7 +20,7 @@
 Install My Programms & Configs:
 
 ```bash
-exec wget -q -O - https://raw.githubusercontent.com/paulsenik/realPaulsen/main/linuxSetup.bash | bash
+exec wget -q -O - https://raw.githubusercontent.com/paulsenik/paulsenik/main/linuxSetup.bash | bash
 ```
 
 [Script](linuxSetup.bash)
