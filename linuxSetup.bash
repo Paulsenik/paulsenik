@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Paulsenik's Debian Installscript #
-# Normally used for existing KDE-installation
+# Paulsenik's Ubuntu/Debian Installscript # (run on plain Debian can be buggy)
+# Normally used for KDE (Kubuntu, KDE-Neon, etc.)
 # Installs my main programms with minimal configs
 #
 # https://paulsenik.de
@@ -113,6 +113,8 @@ git clone https://github.com/paulsenik/paulsenik.git
 cp -r -u ${folderRepo}/.config/ulauncher ${HOME}/.config
 ## Ryolith
 cp -r -u ${folderRepo}/.ryolith ${HOME}
+## Inputsink
+cp -r -u ${folderRepo}/.inputsink ${HOME}
 ## Konsole
 cp -r -u ${folderRepo}/.local/share/konsole/ ${HOME}/.local/share/
 

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Media
-Comment[en_GB]=paulenik.de
-Comment=paulenik.de
+Comment[en_GB]=paulsenik.de
+Comment=paulsenik.de
 Exec=java -jar _HOME_/.ryolith/ryolith.jar
 GenericName[en_GB]=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
 GenericName=Manages all audioprocesses of different programs. Programs can be grouped together into a dedicated volume-control
