@@ -25,6 +25,8 @@ KrohnkiteV="0.8.1"
 Link_Toolbox="https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz" #--version: https://www.jetbrains.com/toolbox-app/download/other.html
 Link_Krohnkite="https://github.com/esjeon/krohnkite/releases/download/v${KrohnkiteV}/krohnkite-${KrohnkiteV}.kwinscript"
 Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6_all.deb"
+Proton_Bridge="https://proton.me/download/bridge/protonmail-bridge_3.10.0-1_amd64.deb"
+Proton_VPN="https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb"
 
 
 # Start
@@ -44,7 +46,7 @@ read confirm
 if [[ $confirm == y* ]]; then
   sudo apt update -y
 else
-    echo "Skipping..."
+  echo "Skipping..."
 fi
 
 
@@ -60,7 +62,7 @@ if [[ $confirm == y* ]]; then
   sudo apt install plasma-discover-backend-flatpak -y
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 else
-    echo "Skipping..."
+  echo "Skipping..."
 fi
 
 
@@ -84,7 +86,7 @@ if [[ $confirm == y* ]]; then
   sudo apt install wmctrl -y #-- Ulauncher-toggle option
 
 else
-    echo "Skipping..."
+  echo "Skipping..."
 fi
 
 
@@ -113,7 +115,39 @@ if [[ $confirm == y* ]]; then
   flatpak install org.telegram.desktop -y --noninteractive
 
 else
-    echo "Skipping..."
+  echo "Skipping..."
+fi
+
+
+## VPN
+echo -e "${BBlue}>> VPNs & Mail << ${Color_Off}\n"
+echo "Proceed? [y/N]: "
+read confirm
+if [[ $confirm == y* ]]; then
+
+  cd $folderInstalls
+
+  ### Netbird dependecy
+  sudo apt install ca-certificates curl gnupg -y
+  curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
+  ### Nebird UI & CLI
+  sudo apt-get update -y
+  sudo apt-get install netbird -y
+  sudo apt-get install netbird-ui -y
+
+  ### Proton
+  #### Mail
+  wget -nv -nc --show-progress --progress="bar" $Proton_Bridge
+  sudo apt install ./protonmail-bridge_3.10.0-1_amd64.deb -y
+
+  #### VPN
+  wget -nv -nc --show-progress --progress="bar" $Proton_VPN
+  sudo dpkg -i ./protonvpn-stable-release_1.0.3-2_all.deb -y
+  sudo apt update -y
+
+else
+  echo "Skipping..."
 fi
 
 
@@ -137,7 +171,7 @@ if [[ $confirm == y* ]]; then
   ./jetbrains-toolbox --minimize
 
 else
-    echo "Skipping..."
+  echo "Skipping..."
 fi
 
 
@@ -169,8 +203,9 @@ if [[ $confirm == y* ]]; then
   sed -i "s/_HOME_/\/home\/${USER}/g" ${HOME}/.local/share/applications/*
 
 else
-    echo "Skipping..."
+  echo "Skipping..."
 fi
+
 
 ## KDE (check if kde5)
 if command -v kwriteconfig5 >/dev/null 2>&1; then
@@ -193,7 +228,7 @@ if command -v kwriteconfig5 >/dev/null 2>&1; then
     ln -s "$HOME/.local/share/kwin/scripts/krohnkite/metadata.desktop" "$HOME/.local/share/kservices5/krohnkite.desktop"
 
   else
-      echo "Skipping..."
+    echo "Skipping..."
   fi
 else
   echo "${BBlue}No kde5-installation found!"
