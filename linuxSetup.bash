@@ -27,6 +27,7 @@ Link_Krohnkite="https://github.com/esjeon/krohnkite/releases/download/v${Krohnki
 Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6_all.deb"
 Proton_Bridge="https://proton.me/download/bridge/protonmail-bridge_3.10.0-1_amd64.deb"
 Proton_VPN="https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb"
+Flameshot_Shortcuts="https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys"
 
 
 # Start
@@ -73,6 +74,8 @@ echo "Proceed? [y/N]: "
 read confirm
 if [[ $confirm == y* ]]; then
 
+  cd $folderInstalls
+
   ### jetbrains toolbox-app dependencies
   sudo apt install libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfig libgtk-3-bin -y
 
@@ -84,6 +87,25 @@ if [[ $confirm == y* ]]; then
   sudo apt install default-jre default-jdk -y
   sudo apt install python3-pip -y # Ulauncher dependency
   sudo apt install wmctrl -y #-- Ulauncher-toggle option
+
+  #### Docker Engine
+  for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg -y; done
+  sudo apt-get update -y
+  sudo apt-get install ca-certificates curl -y
+  sudo install -m 0755 -d /etc/apt/keyrings -y
+  sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update -y
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+  ### apt Blacklist
+  sudo apt purge thunderbird -y
+  sudo apt purge firefox -y
+  sudo apt purge libreoffice -y
 
 else
   echo "Skipping..."
@@ -170,6 +192,9 @@ if [[ $confirm == y* ]]; then
   cd $Toolbox
   ./jetbrains-toolbox --minimize
 
+  ### Inputsink & Ryolith
+  sudo usermod -a -G uucp,dialout,tty $USER
+
 else
   echo "Skipping..."
 fi
@@ -217,7 +242,7 @@ if command -v kwriteconfig5 >/dev/null 2>&1; then
   if [[ $confirm == y* ]]; then
 
     ### Background
-    kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" --group 'Containments' --group '1' --group 'Wallpaper' --group 'org.kde.image' --group 'General' --key 'Image' "$folderInstalls/paulsenik/Pictures/Profile/Phoenix 1.0/phoenix_v1.0_UHD-2.png"
+    kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" --group 'Containments' --group '1' --group 'Wallpaper' --group 'org.kde.image' --group 'General' --key 'Image' "$folderRepo/Pictures/Profile/Phoenix 1.0/phoenix_v1.0_UHD-2.png"
 
     ### Krohnkite
     cd $folderInstalls
@@ -226,6 +251,10 @@ if command -v kwriteconfig5 >/dev/null 2>&1; then
     ###- Enable User Config
     mkdir -p "$HOME/.local/share/kservices5/"
     ln -s "$HOME/.local/share/kwin/scripts/krohnkite/metadata.desktop" "$HOME/.local/share/kservices5/krohnkite.desktop"
+
+    ### Flameshot
+    wget -nv -nc --show-progress --progress="bar" $Flameshot_Shortcuts
+    ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
 
   else
     echo "Skipping..."
