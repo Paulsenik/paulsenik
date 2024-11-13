@@ -4,28 +4,33 @@
 
 # [Paulsenik🙃](https://paulsenik.de)
 
+> [!NOTE]
 > [🎮Itch.io](https://paulsenik.itch.io)
-> [📯Mail](mailto:mail@paulsenik.de)
+> [📧Mail](mailto:mail@paulsenik.de)
 
 ___
 
 ## ⭐ Favorite Dev-Tech
 
 <div>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/kdeneon/kdeneon-original.svg" title="KDE Neon" alt="KDE Neon" width="90"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/jetbrains/jetbrains-original.svg" title="Jetbrains" alt="Jetbrains" width="90"/>
-
-  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/java/java-original.svg" title="Java" alt="Java" width="90"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/csharp/csharp-original.svg" title="C#" alt="C#" width="90"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/arduino/arduino-original-wordmark.svg" title="Arduino" alt="Arduino" width="90"/>
-
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/godot/godot-original.svg" title="Godot" alt="Godot" width="90"/>
-  <!--<img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/unity/unity-original.svg" title="Unity" alt="Unity" width="90"/>-->
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/unity/unity-original.svg" title="Unity" alt="Unity" width="90"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/arduino/arduino-original-wordmark.svg" title="Arduino" alt="Arduino" width="90"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/blender/blender-original.svg" title="Blender" alt="Blender" width="90"/>
+</div>
+<div>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="90"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/docker/docker-original.svg" title="Docker" alt="Docker" width="90"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/kubernetes/kubernetes-plain.svg" title="Kubernetes" alt="kubernetes" width="90"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/spring/spring-original.svg" title="Spring" alt="Spring" width="90"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/react/react-original.svg" title="React" alt="React" width="90"/>
-  <!--<img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/svelte/svelte-original.svg" title="Svelte" alt="Svelte" width="90"/>-->
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/svelte/svelte-original.svg" title="Svelte" alt="Svelte" width="90"/>
+</div>
+<div>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/java/java-original.svg" title="Java" alt="Java" width="90"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/csharp/csharp-original.svg" title="C#" alt="C#" width="90"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/latex/latex-original.svg" title="LaTeX" alt="LaTeX" width="90"/>
 </div>
 
 ___
