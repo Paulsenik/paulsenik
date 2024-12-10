@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Paulsenik's Ubuntu/Debian Installscript # (run on plain Debian can be buggy)
-# Normally used for KDE (Kubuntu, KDE-Neon, etc.)
+# Normally used for KDE 6 (Kubuntu, KDE-Neon, etc.)
 # Installs my main programms with minimal configs
 #
 # https://paulsenik.de
-# mail@paulsenik.de
+# https://github.com/paulsenik/paulsenik
 
 
 # Variables:
@@ -21,10 +21,10 @@ folderCode="${HOME}/Dev"
 folderRepo="$folderInstalls/paulsenik"
 ## programms
 Toolbox="jetbrains-toolbox-2.2.3.20090"
-KrohnkiteV="0.8.1"
+KrohnkiteV="0.9.8.4"
 Link_Toolbox="https://download.jetbrains.com/toolbox/${Toolbox}.tar.gz" #--version: https://www.jetbrains.com/toolbox-app/download/other.html
-Link_Krohnkite="https://github.com/esjeon/krohnkite/releases/download/v${KrohnkiteV}/krohnkite-${KrohnkiteV}.kwinscript"
-Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6_all.deb"
+Link_Krohnkite="https://github.com/anametologin/krohnkite/releases/download/${KrohnkiteV}/krohnkite-${KrohnkiteV}.kwinscript"
+Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/v6.0.0-beta16/ulauncher_6.0.0.beta16_all.deb"
 Proton_Bridge="https://proton.me/download/bridge/protonmail-bridge_3.10.0-1_amd64.deb"
 Proton_VPN="https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb"
 Flameshot_Shortcuts="https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys"
@@ -156,7 +156,7 @@ if [[ $confirm == y* ]]; then
 
   #### VPN
   wget -nv -nc --show-progress --progress="bar" $Proton_VPN
-  sudo dpkg -i ./protonvpn-stable-release_1.0.3-2_all.deb -y
+  sudo apt install ./protonvpn-stable-release_1.0.3-2_all.deb -y
   sudo apt update -y
 
   #### Tailscale
@@ -179,8 +179,8 @@ if [[ $confirm == y* ]]; then
 
   ### Ulauncher
   wget -nv -nc --show-progress --progress="bar" $Link_Ulauncher
-  sudo apt install ./ulauncher_5.15.6_all.deb -y
-  pip3 install requests --user #-- pip-Dependencies
+  sudo apt install ./ulauncher_6.0.0.beta16_all.deb -y
+  sudo apt install python3-requests -y
 
   ### Jetbrains-Toolbox
   wget -nv -nc --show-progress --progress="bar" $Link_Toolbox
@@ -223,6 +223,12 @@ if [[ $confirm == y* ]]; then
   ##- Replaces _HOME_ with actual home-folder
   sed -i "s/_HOME_/\/home\/${USER}/g" ${HOME}/.local/share/applications/*
 
+  ### Flameshot
+  mkdir -p ${HOME}/.local/bin
+  ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ${HOME}/.local/bin/flameshot
+  cd ${HOME}/.local/bin
+  ./flameshot/org.flameshot.Flameshot
+
 else
   echo "Skipping..."
 fi
@@ -240,17 +246,16 @@ if command -v kwriteconfig5 >/dev/null 2>&1; then
     ### Background
     kwriteconfig5 --file "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc" --group 'Containments' --group '1' --group 'Wallpaper' --group 'org.kde.image' --group 'General' --key 'Image' "$folderRepo/Pictures/Profile/Phoenix 1.0/phoenix_v1.0_UHD-2.png"
 
+    ### Flameshot Shortcuts
+    wget -nv -nc --show-progress --progress="bar" $Flameshot_Shortcuts
+
     ### Krohnkite
     cd $folderInstalls
-    wget -nv -nc --show-progress --progress="bar" $Link_Krohnkite
-    plasmapkg2 -t kwinscript -i "krohnkite-${KrohnkiteV}.kwinscript"
+    #wget -nv -nc --show-progress --progress="bar" $Link_Krohnkite
+    #plasmapkg2 -t kwinscript -i "krohnkite-${KrohnkiteV}.kwinscript"
     ###- Enable User Config
     mkdir -p "$HOME/.local/share/kservices5/"
     ln -s "$HOME/.local/share/kwin/scripts/krohnkite/metadata.desktop" "$HOME/.local/share/kservices5/krohnkite.desktop"
-
-    ### Flameshot
-    wget -nv -nc --show-progress --progress="bar" $Flameshot_Shortcuts
-    ln -s /var/lib/flatpak/exports/bin/org.flameshot.Flameshot ~/.local/bin/flameshot
 
   else
     echo "Skipping..."
