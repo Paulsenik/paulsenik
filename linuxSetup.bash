@@ -28,6 +28,7 @@ Link_Ulauncher="https://github.com/Ulauncher/Ulauncher/releases/download/v6.0.0-
 Proton_Bridge="https://proton.me/download/bridge/protonmail-bridge_3.10.0-1_amd64.deb"
 Proton_VPN="https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-2_all.deb"
 Flameshot_Shortcuts="https://raw.githubusercontent.com/flameshot-org/flameshot/master/docs/shortcuts-config/flameshot-shortcuts-kde.khotkeys"
+Activity_Watch="https://github.com/ActivityWatch/activitywatch/releases/download/v0.13.2/activitywatch-v0.13.2-linux-x86_64.deb"
 
 
 # Start
@@ -181,6 +182,10 @@ if [[ $confirm == y* ]]; then
   wget -nv -nc --show-progress --progress="bar" $Link_Ulauncher
   sudo apt install ./ulauncher_6.0.0.beta16_all.deb -y
   sudo apt install python3-requests -y
+
+  ### ActivityWatch
+  wget -nv -nc --show-progress --progress="bar" $Activity_Watch
+  sudo apt install ./activitywatch-v0.13.2-linux-x86_64.deb -y
 
   ### Jetbrains-Toolbox
   wget -nv -nc --show-progress --progress="bar" $Link_Toolbox
