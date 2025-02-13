@@ -1,0 +1,5 @@
+---
+- name: Install KColorchooser
+  flatpak:
+    name:
+      - org.kde.kcolorchooser

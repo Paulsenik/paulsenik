@@ -1,0 +1,7 @@
+- name: Private Host Setup
+  become_method: sudo
+  hosts:
+    - pc
+    - laptop
+  roles:
+    - kcolorchooser
