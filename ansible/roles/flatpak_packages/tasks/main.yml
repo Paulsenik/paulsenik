@@ -1,0 +1,14 @@
+---
+- name: "Install flatpak remotes"
+  flatpak_remote:
+    name: "{{ item.name }}"
+    flatpakrepo_url: "{{ item.url }}"
+    state: "present"
+    method: "user"
+  loop: "{{ flatpak_packages__remotes }}"
+
+- name: "Install flatpak packages"
+  flatpak:
+    name: "{{ flatpak_packages__packages }}"
+    state: "present"
+    method: "user"

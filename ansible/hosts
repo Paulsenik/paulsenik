@@ -1,6 +1,11 @@
 [pc]
-neon
+neon.seidel-paul.eu
 
 [laptop]
-cobalt
-carbon
+cobalt.seidel-paul.eu
+
+#[pc:vars]
+#ansible_user = root
+
+#[laptop:vars]
+#ansible_user = root

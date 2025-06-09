@@ -1,0 +1,40 @@
+---
+- name: "Add apt keys"
+  become: true
+  get_url:
+    url: "{{ item.key }}"
+    dest: "/etc/apt/keyrings/{{ item.name }}{{ '.gpg' if '.gpg' in item.repo else '.asc' }}"
+    mode: '0644'
+  loop: "{{ apt_packages__sources }}"
+
+- name: "Add apt sources"
+  become: true
+  apt_repository:
+    repo: "{{ item.repo }}"
+    filename: "{{ item.name }}"
+    state: present
+    update_cache: true
+  loop: "{{ apt_packages__sources }}"
+
+- name: "Add apt deb-src sources"
+  become: true
+  apt_repository:
+    repo: "deb-src {{ item.repo[4:] }}"
+    filename: "{{ item.name }}"
+    state: present
+    update_cache: true
+  loop: "{{ apt_packages__sources }}"
+  when: item.with_sources is defined and item.with_sources
+
+- name: "Install apt packages"
+  become: true
+  apt:
+    name: "{{ apt_packages__packages }}"
+    state: "present"
+
+- name: "Install apt deb files"
+  become: true
+  apt:
+    deb: "{{ item }}"
+    state: "present"
+  loop: "{{ apt_packages__deb_files }}"
