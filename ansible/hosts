@@ -3,9 +3,3 @@ neon.seidel-paul.eu
 
 [laptop]
 cobalt.seidel-paul.eu
-
-#[pc:vars]
-#ansible_user = root
-
-#[laptop:vars]
-#ansible_user = root

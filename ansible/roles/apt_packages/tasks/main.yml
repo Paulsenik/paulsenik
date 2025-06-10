@@ -32,6 +32,12 @@
     name: "{{ apt_packages__packages }}"
     state: "present"
 
+- name: "Remove apt packages"
+  become: true
+  apt:
+    name: "{{ apt_packages__packages_blacklist }}"
+    state: "absent"
+
 - name: "Install apt deb files"
   become: true
   apt:

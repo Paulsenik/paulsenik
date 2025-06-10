@@ -6,4 +6,18 @@ echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa
 sudo apt update && sudo apt install ansible
 
 
-ansible-playbook -i ansible/hosts -l pc ansible/playbook.yaml
+ansible-playbook -i hosts -l pc playbook.yaml
+
+# TODO
+## Tailscale
+## yubikey
+## jetbrains
+## folders (Dev, Installs)
+## ryolith configs
+## konsole configs
+## other configs/dotfiles
+## wallpaper
+## ssh
+## >> kde >>
+### krohnkite install
+### setup shortcuts
