@@ -5,4 +5,5 @@
     - laptop
   roles:
     #- flatpak_packages
-    - apt_packages
+    #- apt_packages
+    - kcolorchooser
