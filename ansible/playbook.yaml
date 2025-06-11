@@ -1,9 +1,12 @@
 - name: Private Host Setup
   become_method: sudo
   hosts:
-    - pc
-    - laptop
+    - desktop
   roles:
-    #- flatpak_packages
-    #- apt_packages
-    - kcolorchooser
+    - flatpak_packages
+    - apt_packages
+    - yubikey
+    - folders-desktop
+    - role: artis3n.tailscale.machine
+      vars:
+        tailscale_up_skip: true

@@ -8,10 +8,6 @@ apt_packages__sources:
   - name: protonvpn
     repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/protonvpn.asc] https://repo.protonvpn.com/debian stable main"
     key: "https://repo.protonvpn.com/debian/public_key.asc"
-  - name: steam
-    repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/steam.gpg] http://repo.steampowered.com/steam/ stable steam"
-    key: "https://repo.steampowered.com/steam/archive/stable/steam.gpg"
-    with_sources: true
   - name: unityhub
     repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/unityhub.asc] https://hub.unity3d.com/linux/repos/deb stable main"
     key: "https://hub.unity3d.com/linux/keys/public"
@@ -58,20 +54,13 @@ apt_packages__packages:
   - unityhub
   # VPNs
   - openvpn
-  # Yubikey
-  - libpam-yubico
-  - libpam-u2f
-  - ykls
-  - yubikey-luks
-  - yubikey-manager
-  - yubikey-personalization
-  - scdaemon
   # Common Utilities
   - default-jre
   - default-jdk
   - zip
   - tar
   - nmap
+  - neofetch
   - htop
   - wget
   - curl
