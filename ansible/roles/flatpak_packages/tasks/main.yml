@@ -10,5 +10,5 @@
 - name: "Install flatpak packages"
   flatpak:
     name: "{{ flatpak_packages__packages }}"
-    state: "present"
+    state: "latest"
     method: "user"

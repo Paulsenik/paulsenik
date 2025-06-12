@@ -1,0 +1,20 @@
+- name: "Install konsole packages"
+  become: true
+  apt:
+    name: konsole
+    state: present
+
+- name: Ensure konsole directory exists in .local/share
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.local/share/konsole"
+    state: directory
+    mode: '0755'
+
+- name: Copy konsole-folder
+  ansible.builtin.copy:
+    src: konsole/
+    dest: "{{ ansible_user_dir }}/.local/share/konsole"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0755'
+    directory_mode: '0755'

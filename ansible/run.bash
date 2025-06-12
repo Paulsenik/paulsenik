@@ -13,12 +13,10 @@ ansible-galaxy collection install artis3n.tailscale
 ansible-playbook -i hosts -l desktop playbook.yaml -K
 
 # TODO
-## folders (Dev, Installs)
-## ryolith configs
-## konsole configs
 ## other configs/dotfiles
-## wallpaper
-## ssh
+## ulauncher
 ## >> kde >>
+### wallpaper
+### autostart
 ### krohnkite install
 ### setup shortcuts

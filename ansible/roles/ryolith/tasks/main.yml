@@ -1,0 +1,23 @@
+- name: Ensure .ryolith directory exists in home
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.ryolith"
+    state: directory
+    mode: '0755'
+
+- name: Copy .ryolith dot-folder to home directory
+  ansible.builtin.copy:
+    src: .ryolith/
+    dest: "{{ ansible_user_dir }}/.ryolith/"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0755'
+    directory_mode: '0755'
+
+- name: Add Ryolith.desktop
+  ansible.builtin.copy:
+    src: Ryolith.desktop
+    dest: "{{ ansible_user_dir }}/.local/share/applications/Ryolith.desktop"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0755'
+    directory_mode: '0755'

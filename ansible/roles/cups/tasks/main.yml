@@ -1,0 +1,13 @@
+- name: "Install CUPS"
+  become: true
+  apt:
+    name:
+      - cups
+    state: "present"
+
+- name: "Start and enable CUPS service"
+  become: true
+  ansible.builtin.systemd:
+    name: cups
+    state: started
+    enabled: yes

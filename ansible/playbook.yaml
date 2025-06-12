@@ -4,9 +4,9 @@
     - desktop
   roles:
     - flatpak_packages
-    - apt_packages
-    - yubikey
-    - folders-desktop
-    - role: artis3n.tailscale.machine
-      vars:
-        tailscale_up_skip: true
+    #- apt_packages
+    #- yubikey
+    #- folders-desktop
+    #- cups
+    #- ryolith
+    #- konsole
