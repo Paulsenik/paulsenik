@@ -3,10 +3,11 @@
   hosts:
     - desktop
   roles:
-    - flatpak_packages
+    #- flatpak_packages
     #- apt_packages
     #- yubikey
     #- folders-desktop
     #- cups
     #- ryolith
     #- konsole
+    - ulauncher

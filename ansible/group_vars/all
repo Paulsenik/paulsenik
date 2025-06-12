@@ -77,7 +77,6 @@ apt_packages__packages_blacklist:
 apt_packages__deb_files:
   - "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.deb"
   - "https://proton.me/download/bridge/protonmail-bridge_3.19.0-1_amd64.deb"
-  - "https://github.com/Ulauncher/Ulauncher/releases/download/v6.0.0-beta16/ulauncher_6.0.0.beta16_all.deb"
   - "https://github.com/ActivityWatch/activitywatch/releases/download/v0.13.2/activitywatch-v0.13.2-linux-x86_64.deb"
 flatpak_packages__remotes:
   - name: flathub

@@ -13,8 +13,6 @@ ansible-galaxy collection install artis3n.tailscale
 ansible-playbook -i hosts -l desktop playbook.yaml -K
 
 # TODO
-## other configs/dotfiles
-## ulauncher
 ## >> kde >>
 ### wallpaper
 ### autostart

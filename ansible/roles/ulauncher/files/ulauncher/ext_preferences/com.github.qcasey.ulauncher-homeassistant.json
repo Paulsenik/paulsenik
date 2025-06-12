@@ -1,0 +1,11 @@
+{
+    "preferences": {
+        "hass_key": "MISSING",
+        "hass_url": "https://smart.seidel-paul.eu"
+    },
+    "triggers": {
+        "keyword": {
+            "keyword": "ha"
+        }
+    }
+}

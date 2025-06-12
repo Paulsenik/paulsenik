@@ -1,0 +1,20 @@
+- name: "Install ulauncher"
+  become: true
+  apt:
+    deb: "https://github.com/Ulauncher/Ulauncher/releases/download/v6.0.0-beta16/ulauncher_6.0.0.beta16_all.deb"
+    state: "present"
+
+- name: Ensure ulauncher directory exists
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.config/ulauncher/"
+    state: directory
+    mode: '0755'
+
+- name: Copy ulauncher-folder
+  ansible.builtin.copy:
+    src: ulauncher/
+    dest: "{{ ansible_user_dir }}/.config/ulauncher/"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0755'
+    directory_mode: '0755'

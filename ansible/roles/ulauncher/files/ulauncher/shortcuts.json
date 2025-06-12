@@ -1,0 +1,56 @@
+{
+  "0a6ee8f7-399f-4180-8d68-825871b3ea72": {
+    "added": 1663435156,
+    "cmd": "xkill",
+    "id": "0a6ee8f7-399f-4180-8d68-825871b3ea72",
+    "is_default_search": false,
+    "keyword": "xkill",
+    "name": "xkill",
+    "run_without_argument": true
+  },
+  "a9ab1b5d-ea4f-41a3-b8dd-0bdd395ea599": {
+    "added": 1668265946,
+    "cmd": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/files/?dir=/&fileid=2283946",
+    "id": "a9ab1b5d-ea4f-41a3-b8dd-0bdd395ea599",
+    "is_default_search": false,
+    "keyword": "fs",
+    "name": "FS",
+    "run_without_argument": true
+  },
+  "ec807082-ec21-43a4-97ad-4c672deebde4": {
+    "added": 1665844938,
+    "cmd": "https://cloud.seidel-paul.eu/apps/deck/",
+    "id": "ec807082-ec21-43a4-97ad-4c672deebde4",
+    "is_default_search": false,
+    "keyword": "deck",
+    "name": "Deck",
+    "run_without_argument": true
+  },
+  "f05f73de-abec-47ce-903a-c6933962ce2b": {
+    "added": 1665844965,
+    "cmd": "https://cloud.seidel-paul.eu/apps/calendar/timeGridWeek/now",
+    "id": "f05f73de-abec-47ce-903a-c6933962ce2b",
+    "is_default_search": false,
+    "keyword": "Calendar",
+    "name": "Calendar",
+    "run_without_argument": true
+  },
+  "juul0ierhlkolqqp5ovc": {
+    "added": 1749742085,
+    "cmd": "https://gemini.google.com/app",
+    "id": "juul0ierhlkolqqp5ovc",
+    "is_default_search": false,
+    "keyword": "gemini",
+    "name": "Gemini",
+    "run_without_argument": true
+  },
+  "wkyfq4subetnytcosode": {
+    "added": 1736168537,
+    "cmd": "https://chatgpt.com/?temporary-chat=true",
+    "id": "wkyfq4subetnytcosode",
+    "is_default_search": false,
+    "keyword": "chatgpt",
+    "name": "ChatGPT",
+    "run_without_argument": true
+  }
+}
