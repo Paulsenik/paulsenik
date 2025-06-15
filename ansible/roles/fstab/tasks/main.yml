@@ -1,0 +1,9 @@
+# Gaming on neon
+- name: Ensure /Holz is mounted and in fstab
+  become: true
+  ansible.builtin.mount:
+    src: UUID=2631212D786A6148
+    path: /Holz
+    fstype: auto
+    opts: "mode=0755,uid=1000,gid=1000"
+    state: present

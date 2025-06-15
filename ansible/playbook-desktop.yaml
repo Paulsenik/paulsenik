@@ -1,0 +1,30 @@
+- name: Workstation Setup
+  become_method: sudo
+  hosts: workstation
+  vars_files:
+    - vars/desktop_vars.yml
+  roles:
+    - flatpak_packages
+    #- apt_packages
+    #- yubikey
+    #- folders-desktop
+    #- cups
+    #- ryolith
+    #- konsole
+    #- ulauncher
+    - fstab
+
+- name: Laptop Setup
+  become_method: sudo
+  hosts: laptop
+  vars_files:
+    - vars/desktop_vars.yml
+  roles:
+    - flatpak_packages
+    #- apt_packages
+    #- yubikey
+    #- folders-desktop
+    #- cups
+    #- ryolith
+    #- konsole
+    #- ulauncher

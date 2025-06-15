@@ -1,8 +1,14 @@
-[desktop]
+[workstation]
 neon.seidel-paul.eu
+
+[laptop]
 cobalt.seidel-paul.eu
 
 [debian-server]
 boron.seidel-paul.eu
 zink.seidel-paul.eu
 selenium.seidel-paul.eu
+
+[nas-server]
+titanium.seidel-paul.eu
+vanadium.seidel-paul.eu
