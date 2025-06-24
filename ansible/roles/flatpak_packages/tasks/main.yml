@@ -4,11 +4,11 @@
     name: "{{ item.name }}"
     flatpakrepo_url: "{{ item.url }}"
     state: "present"
-    method: "user"
+    method: "system"
   loop: "{{ flatpak_packages__remotes }}"
 
 - name: "Install flatpak packages"
   flatpak:
     name: "{{ flatpak_packages__packages }}"
     state: "latest"
-    method: "user"
+    method: "system"
