@@ -8,6 +8,7 @@
   loop: "{{ flatpak_packages__remotes }}"
 
 - name: "Install flatpak packages"
+  become: true
   flatpak:
     name: "{{ flatpak_packages__packages }}"
     state: "latest"

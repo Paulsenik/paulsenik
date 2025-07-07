@@ -93,7 +93,7 @@ flatpak_packages__packages:
   - com.jaquadro.NBTExplorer
   - com.nextcloud.desktopclient.nextcloud
   - com.spotify.Client
-  - com.teamspeak.TeamSpeak
+  - com.teamspeak.TeamSpeak3
   - com.valvesoftware.Steam
   - dev.deedles.Trayscale
   - fr.romainvigier.MetadataCleaner
