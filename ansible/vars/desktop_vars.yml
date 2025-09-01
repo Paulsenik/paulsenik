@@ -55,7 +55,7 @@ apt_packages__packages:
   - zip
   - tar
   - nmap
-  - neofetch
+  - fastfetch
   - htop
   - wget
   - curl
@@ -75,8 +75,6 @@ apt_packages__packages_blacklist:
   - firefox
   - libreoffice
 apt_packages__deb_files:
-  - "https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.deb"
-  - "https://proton.me/download/bridge/protonmail-bridge_3.19.0-1_amd64.deb"
   - "https://github.com/ActivityWatch/activitywatch/releases/download/v0.13.2/activitywatch-v0.13.2-linux-x86_64.deb"
 flatpak_packages__remotes:
   - name: flathub
@@ -90,16 +88,14 @@ flatpak_packages__packages:
   - com.github.Matoking.protontricks
   - com.github.flxzt.rnote
   - com.github.tchx84.Flatseal
-  - com.jaquadro.NBTExplorer
   - com.nextcloud.desktopclient.nextcloud
   - com.spotify.Client
   - com.teamspeak.TeamSpeak3
   - com.valvesoftware.Steam
   - dev.deedles.Trayscale
-  - fr.romainvigier.MetadataCleaner
   - im.riot.Riot
   - md.obsidian.Obsidian
-  - net.davidotek.pupgui2
+  - net.davidotek.pupgui2 #protonup
   - org.kde.filelight
   - org.kde.kcolorchooser
   - org.kde.krita

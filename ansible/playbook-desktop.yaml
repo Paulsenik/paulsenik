@@ -4,15 +4,15 @@
   vars_files:
     - vars/desktop_vars.yml
   roles:
-    #- flatpak_packages
-    #- apt_packages
-    #- yubikey
-    #- folders-desktop
-    #- cups
-    #- ryolith
-    #- konsole
-    #- ulauncher
-    #- fstab
+    - flatpak_packages
+    - apt_packages
+    - yubikey
+    - folders-desktop
+    - cups
+    - ryolith
+    - konsole
+    - ulauncher
+    - fstab
     - rust
 
 - name: Laptop Setup
@@ -22,11 +22,11 @@
     - vars/desktop_vars.yml
   roles:
     - flatpak_packages
-    #- apt_packages
-    #- yubikey
-    #- folders-desktop
-    #- cups
-    #- ryolith
-    #- konsole
-    #- ulauncher
-    #- rust
+    - apt_packages
+    - yubikey
+    - folders-desktop
+    - cups
+    - ryolith
+    - konsole
+    - ulauncher
+    - rust
