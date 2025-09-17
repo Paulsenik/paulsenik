@@ -1,0 +1,28 @@
+- name: "Install Gamemode with lug-helper dependencies"
+  become: true
+  apt:
+    name:
+      - gamemode
+      - coreutils
+      - curl
+      - polkit
+      - wine
+    state: "present"
+
+- name: "Ensure lug-helper parent directory exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/Installs"
+    state: directory
+
+- name: "Clone the lutris repository for lug-helper"
+  ansible.builtin.git:
+    repo: 'https://github.com/starcitizen-lug/lug-helper.git'
+    dest: "{{ ansible_facts.user_dir }}/Installs/lug-helper"
+    clone: yes
+    update: yes
+
+- name: "Create RSI Launcher desktop file"
+  ansible.builtin.template:
+    src: "rsi-launcher.desktop.j2"
+    dest: "{{ ansible_facts.user_dir }}/.local/share/applications/RSI Launcher.desktop"
+    mode: "0755"
