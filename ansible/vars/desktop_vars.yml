@@ -94,6 +94,7 @@ flatpak_packages__packages:
   - com.valvesoftware.Steam
   - dev.deedles.Trayscale
   - im.riot.Riot
+  - io.github.Soundux
   - md.obsidian.Obsidian
   - net.davidotek.pupgui2 #protonup
   - org.kde.filelight
