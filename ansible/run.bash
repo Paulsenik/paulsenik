@@ -10,7 +10,11 @@ ansible-galaxy collection install artis3n.tailscale
 
 
 # Run
-ansible-playbook -i hosts -l workstation playbook-desktop.yaml -K
+ansible-playbook -i hosts -l laptop playbook-desktop.yaml -K
+
+## Run Locally
+# ansible-playbook -i hosts -l laptop --connection=local playbook-desktop.yaml -K
+
 
 # TODO
 ## >> kde >>

@@ -11,3 +11,6 @@ selenium.seidel-paul.eu
 [nas-server]
 titanium.seidel-paul.eu
 vanadium.seidel-paul.eu
+
+[local]
+127.0.0.1
