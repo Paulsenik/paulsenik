@@ -20,5 +20,4 @@ ansible-playbook -i hosts -l laptop playbook-desktop.yaml -K
 ## >> kde >>
 ### wallpaper
 ### autostart
-### krohnkite install
 ### setup shortcuts

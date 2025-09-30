@@ -22,13 +22,13 @@
   vars_files:
     - vars/desktop_vars.yml
   roles:
-    - flatpak_packages
-    - apt_packages
-    - yubikey
-    - folders-desktop
-    - cups
-    - ryolith
-    - konsole
-    - ulauncher
-    - rust
+    #- flatpak_packages
+    #- apt_packages
+    #- yubikey
+    #- folders-desktop
+    #- cups
+    #- ryolith
+    #- konsole
+    #- ulauncher
+    #- rust
     - kde-krohnkite

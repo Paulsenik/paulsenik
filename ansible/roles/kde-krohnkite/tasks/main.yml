@@ -1,8 +1,3 @@
-- name: Ensure community.general is installed
-  ansible.builtin.pause:
-    prompt: "Make sure you have installed the community.general collection: ansible-galaxy collection install community.general"
-  run_once: true
-
 - name: Copy Krohnkite KWin Script files
   ansible.builtin.copy:
     src: krohnkite/
@@ -12,9 +7,20 @@
     mode: '0755'
     directory_mode: '0755'
 
+- name: Check if krohnkite is already installed
+  ansible.builtin.command:
+    cmd: "kpackagetool6 --type KWin/Script --list"
+  register: kwin_scripts_list
+  changed_when: false # This command doesn't change system state
+
+- name: Set a fact for krohnkite installation status
+  ansible.builtin.set_fact:
+    krohnkite_is_installed: "{{ 'krohnkite' in kwin_scripts_list.stdout }}"
+
 - name: Install Krohnkite KWin Script
   ansible.builtin.command:
     cmd: "kpackagetool6 -t KWin/Script -i {{ ansible_user_dir }}/Installs/krohnkite-0.9.9.2_1d7fd74.kwinscript"
+  when: not krohnkite_is_installed
   changed_when: true # kpackagetool6 doesn't always signal change well
 
 - name: Configure KWin Windows behavior
@@ -27,13 +33,6 @@
       - group: Windows
         key: SeparateScreenFocus
         value: 'true'
-
-- name: Enable the KWin Script in kwinrc
-  community.general.kdeconfig:
-    path: "{{ ansible_user_dir }}/.config/kwinrc"
-    group: Plugins
-    key: "krohnkiteEnabled"
-    value: 'true'
 
 - name: Krohnkite settings
   community.general.kdeconfig:
@@ -79,10 +78,15 @@
         key: tileLayoutOrder
         value: '0'
 
+- name: Enable the KWin Script in kwinrc
+  community.general.kdeconfig:
+    path: "{{ ansible_user_dir }}/.config/kwinrc"
+    values:
+      - group: Plugins
+        key: "krohnkiteEnabled"
+        value: 'true'
+
 - name: Reconfigure KWin via D-Bus to apply changes
-  # qdbus-qt6 might be the correct command on Debian 13/KDE 6, check your system
   ansible.builtin.shell:
-    cmd: "qdbus org.kde.KWin /KWin reconfigure"
-  become: yes
-  become_user: "{{ kde_user }}"
+    cmd: "qdbus6 org.kde.KWin /KWin reconfigure"
   changed_when: true
