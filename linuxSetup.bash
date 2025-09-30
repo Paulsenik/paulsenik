@@ -23,7 +23,7 @@ if command -v ansible-playbook >/dev/null 2>&1; then
 else
   echo "${BBlue}No Ansible-installation found!${Color_Off}\n"
 
-  echo "${BBlue}Installing Ansbile..${Color_Off}"
+  echo "${BBlue}Installing Ansible..${Color_Off}"
 
   UBUNTU_CODENAME=jammy
   wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg
@@ -31,6 +31,16 @@ else
   sudo apt update && sudo apt install ansible
 fi
 
-# TODO add repository-clone and local install
+# Get user selections
+RUN_MODE=$(select_run_mode)
+GROUP=$(select_group)
+
+# Run ansible-playbook with selected options
+if [ "$RUN_MODE" = "local" ]; then
+    echo "LOCAL!!!"
+    ansible-playbook -i ansible/hosts -l "$GROUP" --connection=local ansible/playbook-desktop.yaml -K
+else
+    ansible-playbook -i ansible/hosts -l "$GROUP" ansible/playbook-desktop.yaml -K
+fi
 
 exit

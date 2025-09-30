@@ -1,0 +1,14 @@
+{
+    "preferences": {
+        "display_char": "no",
+        "emoji_style": "twemoji",
+        "fallback_emoji_style": "noto",
+        "search_limit": "20",
+        "skin_tone": "\ud83d\udc4c default"
+    },
+    "triggers": {
+        "emoji_kw": {
+            "keyword": "em"
+        }
+    }
+}
