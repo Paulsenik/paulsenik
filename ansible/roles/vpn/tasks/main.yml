@@ -1,7 +1,0 @@
-# https://galaxy.ansible.com/ui/standalone/roles/artis3n/tailscale/install/
-
-- name: "Install Tailscale"
-  become: true
-  artis3n.tailscale.machine:
-    vars:
-      tailscale_up_skip: true

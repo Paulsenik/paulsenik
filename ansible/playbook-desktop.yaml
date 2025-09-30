@@ -16,6 +16,7 @@
     - rust
     - star-citizen
     - kde-krohnkite
+    - kde-settings
 
 - name: Laptop Setup
   become_method: sudo
