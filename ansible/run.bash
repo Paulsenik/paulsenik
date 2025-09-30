@@ -6,18 +6,11 @@ echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa
 sudo apt update && sudo apt install ansible
 
 # Addons
-ansible-galaxy collection install artis3n.tailscale
+#ansible-galaxy collection install artis3n.tailscale
 
 
 # Run
 ansible-playbook -i hosts -l laptop playbook-desktop.yaml -K
 
 ## Run Locally
-# ansible-playbook -i hosts -l laptop --connection=local playbook-desktop.yaml -K
-
-
-# TODO
-## >> kde >>
-### wallpaper
-### autostart
-### setup shortcuts
+ansible-playbook -i hosts -l laptop --connection=local playbook-desktop.yaml -K

@@ -15,6 +15,7 @@
     - fstab
     - rust
     - star-citizen
+    - kde-krohnkite
 
 - name: Laptop Setup
   become_method: sudo
@@ -22,13 +23,14 @@
   vars_files:
     - vars/desktop_vars.yml
   roles:
-    #- flatpak_packages
-    #- apt_packages
-    #- yubikey
-    #- folders-desktop
-    #- cups
-    #- ryolith
-    #- konsole
-    #- ulauncher
-    #- rust
+    - flatpak_packages
+    - apt_packages
+    - yubikey
+    - folders-desktop
+    - cups
+    - ryolith
+    - konsole
+    - ulauncher
+    - rust
     - kde-krohnkite
+    - kde-settings

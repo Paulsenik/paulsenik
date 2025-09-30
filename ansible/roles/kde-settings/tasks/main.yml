@@ -1,0 +1,12 @@
+- name: Copy the Krohnkite global shortcut file to .config
+  ansible.builtin.copy:
+    src: settings/kde6-shortcuts.kksrc
+    dest: "{{ ansible_user_dir }}/.config/kglobalshortcutsrc"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0644'
+
+- name: Reconfigure KWin via D-Bus to apply changes
+  ansible.builtin.shell:
+    cmd: "qdbus6 org.kde.KWin /KWin reconfigure"
+  changed_when: true
