@@ -14,7 +14,7 @@
     path: "{{ ansible_facts.user_dir }}/Installs"
     state: directory
 
-- name: "Clone the lutris repository for lug-helper"
+- name: "Clone the repository for lug-helper"
   ansible.builtin.git:
     repo: 'https://github.com/starcitizen-lug/lug-helper.git'
     dest: "{{ ansible_facts.user_dir }}/Installs/lug-helper"

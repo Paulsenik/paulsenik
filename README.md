@@ -47,14 +47,16 @@ ___
 
 <details close>
 
-<summary>Linux-Install-Script</summary>
+<summary>Linux-Ansible-Install</summary>
 <br>
 Install My Programms & Configs:
 
 ```bash
-exec wget -q -O - https://raw.githubusercontent.com/paulsenik/paulsenik/main/linuxSetup.bash | bash
+git clone https://github.com/paulsenik/paulsenik.git
+cd paulsenik/ansible
+bash run.bash
 ```
 
-[>>Raw Script<<](linuxSetup.bash)
+[>>Raw Script<<](ansible/run.bash)
 
 </details>

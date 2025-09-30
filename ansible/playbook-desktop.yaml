@@ -4,19 +4,19 @@
   vars_files:
     - vars/desktop_vars.yml
   roles:
-    - flatpak_packages
-    - apt_packages
-    - yubikey
     - folders-desktop
+    - fstab
+    - apt_packages
+    - flatpak_packages
+    - kde-krohnkite
+    - kde-settings
+    - yubikey
     - cups
     - ryolith
     - konsole
     - ulauncher
-    - fstab
     - rust
     - star-citizen
-    - kde-krohnkite
-    - kde-settings
 
 - name: Laptop Setup
   become_method: sudo
@@ -24,14 +24,14 @@
   vars_files:
     - vars/desktop_vars.yml
   roles:
-    - flatpak_packages
-    - apt_packages
-    - yubikey
     - folders-desktop
+    - apt_packages
+    - flatpak_packages
+    - kde-krohnkite
+    - kde-settings
+    - yubikey
     - cups
     - ryolith
     - konsole
     - ulauncher
     - rust
-    - kde-krohnkite
-    - kde-settings
