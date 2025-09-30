@@ -18,6 +18,7 @@ apt_packages__packages:
   - docker.io
   # Git
   - git
+  - git-lfs
   - tig
   # jetbrains dep.
   - libfuse2
@@ -38,6 +39,8 @@ apt_packages__packages:
   - steam-devices
   # Ulauncher dep.
   - wmctrl
+  - python3-bs4
+  - python3-pytz
   # Unity Hub
   - unityhub
   # VPNs
@@ -67,6 +70,7 @@ apt_packages__packages_blacklist:
   - thunderbird
   - firefox
   - libreoffice
+  - firefox-esr
 apt_packages__deb_files:
   - "https://github.com/ActivityWatch/activitywatch/releases/download/v0.13.2/activitywatch-v0.13.2-linux-x86_64.deb"
 flatpak_packages__remotes:
