@@ -12,3 +12,4 @@
     name: "{{ flatpak_packages__packages }}"
     state: "latest"
     method: "system"
+  become: true

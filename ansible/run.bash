@@ -47,8 +47,8 @@ echo -e "\n${BBlue}Run locally? [y/N]: ${Color_Off}"
 read confirm
 if [[ $confirm == y* ]]; then
     echo -e "\n${BBlue}Running locally on device-group \"${GROUP}\"!${Color_Off}"
-    ansible-playbook -i hosts -l "$GROUP" --connection=local playbook-desktop.yaml -K
+    ansible-playbook -i hosts -l "$GROUP" --connection=local playbook-desktop.yaml -kK
 else
     echo -e "\n${BBlue}Running remotely on device-group \"${GROUP}\"!${Color_Off}"
-    ansible-playbook -i hosts -l "$GROUP" playbook-desktop.yaml -K
+    ansible-playbook -i hosts -l "$GROUP" playbook-desktop.yaml -kK
 fi

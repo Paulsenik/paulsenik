@@ -1,16 +1,15 @@
 [workstation]
-neon.seidel-paul.eu
+neon.seidel-paul.eu ansible_user=paulsenik
 
 [laptop]
-cobalt.seidel-paul.eu
+cobalt.seidel-paul.eu ansible_user=paulsenik
 
 [debian-server]
-boron.seidel-paul.eu
-selenium.seidel-paul.eu
+boron.seidel-paul.eu ansible_user=paulsenik
+selenium.seidel-paul.eu ansible_user=paulsenik
+rubidium.seidel-paul.eu ansible_user=paulsenik
 
 [nas-server]
-titanium.seidel-paul.eu
-vanadium.seidel-paul.eu
+titanium.seidel-paul.eu ansible_user=admin
+vanadium.seidel-paul.eu ansible_user=admin
 
-[local]
-127.0.0.1

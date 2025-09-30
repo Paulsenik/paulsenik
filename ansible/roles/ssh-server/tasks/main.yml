@@ -1,0 +1,40 @@
+- name: "Install ssh server + client"
+  become: true
+  apt:
+    name:
+      - openssh-server
+      - openssh-client
+    state: "present"
+
+- name: Ensure .ssh directory exists
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.ssh"
+    state: directory
+    mode: '0755'
+
+- name: Ensure authorized_keys file exists with proper permissions
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.ssh/authorized_keys"
+    state: touch
+    mode: '0600'
+
+- name: Add SSH public keys to authorized_keys
+  ansible.builtin.copy:
+    src: files/authorized_keys
+    dest: "{{ ansible_user_dir }}/.ssh/authorized_keys"
+    mode: '0600'
+
+- name: Disable password authentication in sshd_config
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#?PasswordAuthentication'
+    line: 'PasswordAuthentication no'
+    mode: '0644'
+  become: true
+  notify: Restart sshd
+
+- name: Restart sshd
+  ansible.builtin.service:
+    name: sshd
+    state: restarted
+  become: true

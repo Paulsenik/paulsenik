@@ -6,6 +6,7 @@
   roles:
     - folders-desktop
     - fstab
+    - ssh-server
     - apt_packages
     - flatpak_packages
     - kde-krohnkite
@@ -25,6 +26,7 @@
     - vars/desktop_vars.yml
   roles:
     - folders-desktop
+    - ssh-server
     - apt_packages
     - flatpak_packages
     - kde-krohnkite
