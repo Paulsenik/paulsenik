@@ -57,6 +57,12 @@ cd paulsenik/ansible
 bash run.bash
 ```
 
+Or using VPN:
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up --auth-key=SOME_KEY
+```
+
 [>>Raw Script<<](ansible/run.bash)
 
 </details>
