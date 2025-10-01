@@ -20,6 +20,18 @@
     clone: yes
     update: yes
 
+- name: "Ensure .local/share/icons/hicolor/256x256/apps exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/256x256/apps"
+    state: directory
+    mode: '0755'
+
+- name: "Copy rsi-launcher.png to .local/share/icons"
+  ansible.builtin.copy:
+    src: files/rsi-launcher.png
+    dest: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/256x256/apps/rsi-launcher.png"
+    mode: '0755'
+
 - name: "Create RSI Launcher desktop file"
   ansible.builtin.copy:
     src: files/rsi-launcher.desktop

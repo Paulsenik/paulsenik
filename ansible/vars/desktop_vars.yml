@@ -99,6 +99,7 @@ flatpak_packages__packages:
   - org.kde.krita
   - org.kde.krdc
   - org.mozilla.Thunderbird
+  - org.mozilla.firefox
   - org.onlyoffice.desktopeditors
   - org.prismlauncher.PrismLauncher
   - org.telegram.desktop
