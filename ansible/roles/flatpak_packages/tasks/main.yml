@@ -6,6 +6,7 @@
     state: "present"
     method: "system"
   loop: "{{ flatpak_packages__remotes }}"
+  become: true
 
 - name: "Install flatpak packages"
   flatpak:
