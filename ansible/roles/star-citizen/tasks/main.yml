@@ -3,9 +3,12 @@
   apt:
     name:
       - gamemode
+      # lug-helper dependencies
+      - cabextract
       - coreutils
       - curl
       - wine
+      - unzip
     state: "present"
 
 - name: "Ensure lug-helper parent directory exists"
