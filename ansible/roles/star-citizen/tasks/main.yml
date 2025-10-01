@@ -21,7 +21,7 @@
     update: yes
 
 - name: "Create RSI Launcher desktop file"
-  ansible.builtin.template:
-    src: "rsi-launcher.desktop.j2"
+  ansible.builtin.copy:
+    src: files/rsi-launcher.desktop
     dest: "{{ ansible_facts.user_dir }}/.local/share/applications/RSI Launcher.desktop"
-    mode: "0755"
+    mode: '0755'
