@@ -1,0 +1,87 @@
+## Build Process
+# Resources:
+# https://github.com/opentrack/opentrack/wiki/Building-on-Linux
+# https://delanclip.com/manuals/ir-tracking-pro-series/
+# https://wiki.starcitizen-lug.org/Head-Tracking
+
+- name: "Install Opentrack dependencies"
+  become: true
+  apt:
+    name:
+      - build-essential
+      - cmake
+      - git
+      - libopencv-dev
+      - libproc2-dev
+      - qt6-base-private-dev
+      - qt6-tools-dev
+      - wine64-tools
+    state: "present"
+
+- name: "Ensure opentrack parent directory exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/Installs"
+    state: directory
+
+- name: "Clone opentrack repository"
+  ansible.builtin.git:
+    repo: 'https://github.com/opentrack/opentrack.git'
+    dest: "{{ ansible_facts.user_dir }}/Installs/opentrack"
+    clone: yes
+    force: yes
+    update: yes
+
+- name: "Check if opentrack binary exists"
+  stat:
+    path: "{{ ansible_facts.user_dir }}/Installs/opentrack/install/bin/opentrack"
+  register: opentrack_binary
+
+
+- name: "Build opentrack with cmake"
+  shell: cmake . -DSDK_WINE:BOOL=ON
+  args:
+    chdir: "{{ ansible_facts.user_dir }}/Installs/opentrack"
+  when: not opentrack_binary.stat.exists
+
+- name: "Build opentrack with make"
+  shell: make -j$(nproc)
+  args:
+    chdir: "{{ ansible_facts.user_dir }}/Installs/opentrack"
+  when: not opentrack_binary.stat.exists
+
+- name: "Install opentrack"
+  shell: make -j$(nproc) install
+  args:
+    chdir: "{{ ansible_facts.user_dir }}/Installs/opentrack"
+  when: not opentrack_binary.stat.exists
+
+## Configs & Desktop-Setup
+
+- name: "Ensure opentrack-config directory exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/.config/opentrack-2.3/"
+    state: directory
+
+- name: "Copy Delanclip-config to /.config/opentrack-2.3/Delanclip Fusion - USB-C.ini"
+  ansible.builtin.copy:
+    src: files/Delanclip Fusion - USB-C.ini
+    dest: "{{ ansible_facts.user_dir }}/.config/opentrack-2.3/Delanclip Fusion - USB-C.ini"
+    mode: '0755'
+
+- name: "Ensure .local/share/icons/hicolor/256x256/apps exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/256x256/apps"
+    state: directory
+    mode: '0755'
+
+- name: "Copy opentrack.png to .local/share/icons"
+  ansible.builtin.copy:
+    src: files/opentrack.png
+    dest: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/256x256/apps/opentrack.png"
+    mode: '0755'
+
+- name: "Create Opentrack desktop file"
+  ansible.builtin.copy:
+    src: files/opentrack.desktop
+    dest: "{{ ansible_facts.user_dir }}/.local/share/applications/Opentrack.desktop"
+    mode: '0755'

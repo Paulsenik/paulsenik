@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Opentrack
+Type=Application
+Comment=Paulsenik's Opentrack linux-build
+Keywords=Opentrack;Open Track;Delan Clip
+StartupNotify=true
+StartupWMClass=opentrack
+Icon=opentrack.png
+Exec="/home/paulsenik/Installs/opentrack/install/bin/opentrack"
+Path=/home/paulsenik/Installs/opentrack/install/bin
