@@ -82,6 +82,7 @@ flatpak_packages__packages:
   - com.discordapp.Discord
   - com.getpostman.Postman
   - com.github.Eloston.UngoogledChromium
+  - com.github.jeromerobert.pdfarranger
   - com.github.Matoking.protontricks
   - com.github.flxzt.rnote
   - com.github.tchx84.Flatseal
