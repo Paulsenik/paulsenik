@@ -19,6 +19,7 @@
     #- rust
     #- star-citizen
     - opentrack
+    - godot
 
 - name: Laptop Setup
   become_method: sudo
@@ -38,3 +39,4 @@
     - konsole
     - ulauncher
     - rust
+    - godot

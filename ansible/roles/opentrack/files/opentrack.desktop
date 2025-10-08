@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Opentrack
 Type=Application
+Categories=Utility;
 Comment=Paulsenik's Opentrack linux-build
 Keywords=Opentrack;Open Track;Delan Clip
 StartupNotify=true

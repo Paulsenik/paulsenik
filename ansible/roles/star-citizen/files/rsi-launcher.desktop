@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=RSI Launcher
 Type=Application
+Categories=Game;ActionGame;AdventureGame;
 Comment=RSI Launcher
 Keywords=Star Citizen;StarCitizen
 StartupNotify=true

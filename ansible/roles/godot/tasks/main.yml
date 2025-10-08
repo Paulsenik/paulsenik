@@ -1,0 +1,66 @@
+# .NET : https://learn.microsoft.com/en-gb/dotnet/core/install/linux-debian?tabs=dotnet9
+
+- name: "Install Microsoft package repository"
+  become: true
+  apt:
+    deb: https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb
+    state: present
+
+- name: "Update APT cache after adding Microsoft repository"
+  become: true
+  apt:
+    update_cache: yes
+
+- name: "Install .NET "
+  become: true
+  apt:
+    name:
+      - dotnet-sdk-9.0
+      - dotnet-runtime-9.0
+      - aspnetcore-runtime-9.0
+    state: "present"
+
+- name: "Ensure Install directory exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/Installs/Godot"
+    state: directory
+
+- name: "Check if Godot binary exists"
+  ansible.builtin.stat:
+    path: "{{ ansible_user_dir }}/Installs/Godot/Godot_v4.5-stable_mono_linux_x86_64/Godot_v4.5-stable_mono_linux.x86_64"
+  register: godot_binary
+
+- name: "Download Godot"
+  ansible.builtin.get_url:
+    url: https://downloads.godotengine.org/?version=4.5&flavor=stable&slug=mono_linux_x86_64.zip&platform=linux.64
+    dest: "{{ ansible_user_dir }}/Installs/Godot/Godot_v4.5-stable_mono_linux_x86_64.zip"
+    mode: '0644'
+  when: not godot_binary.stat.exists
+
+- name: "Extract Godot"
+  ansible.builtin.unarchive:
+    src: "{{ ansible_user_dir }}/Installs/Godot/Godot_v4.5-stable_mono_linux_x86_64.zip"
+    dest: "{{ ansible_user_dir }}/Installs/Godot"
+    remote_src: yes
+    mode: '0755'
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+  when: not godot_binary.stat.exists
+
+- name: "Ensure .local/share/icons/hicolor/scalable/apps exists"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/scalable/apps"
+    state: directory
+    mode: '0755'
+
+- name: "Copy godot_outlined.svg to .local/share/icons"
+  ansible.builtin.copy:
+    src: files/godot_outlined.svg
+    dest: "{{ ansible_facts.user_dir }}/.local/share/icons/hicolor/scalable/apps/godot.svg"
+    mode: '0644'
+
+- name: "Create RSI Launcher desktop file"
+  ansible.builtin.copy:
+    src: files/godot_4.5_mono.desktop
+    dest: "{{ ansible_facts.user_dir }}/.local/share/applications/godot_4.5_mono.desktop"
+    mode: '0755'

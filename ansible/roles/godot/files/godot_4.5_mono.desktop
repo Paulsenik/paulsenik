@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Godot
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Comment=Godot Game Engine
+Keywords=Godot;Game;Engine;
+StartupNotify=true
+StartupWMClass=godot
+Icon=godot_outlined.svg
+Exec="/home/paulsenik/Installs/Godot/Godot_v4.5-stable_mono_linux_x86_64/Godot_v4.5-stable_mono_linux.x86_64"
+Path=/home/paulsenik/Installs/Godot/Godot_v4.5-stable_mono_linux_x86_64
