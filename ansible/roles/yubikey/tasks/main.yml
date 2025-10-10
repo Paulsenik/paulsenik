@@ -24,6 +24,17 @@
     create: true # Create the file if it doesn't exist
   become: yes # Use become if the user is not the current Ansible user (e.g., if targeting another user's .bashrc)
 
+# 700 -> Directory
+# 600 -> File
+
+- name: "Ensure .gnupg directory exists with correct permissions"
+  ansible.builtin.file:
+    path: "{{ ansible_facts.user_dir }}/.gnupg"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0700'
+
 # Notwendig wenn "yubikey-*"-packages installiert sind (custom udev rules)
 - name: "Set pcsc-shared"
   ansible.builtin.blockinfile:
@@ -33,11 +44,18 @@
       pcsc-shared
     state: present
     create: true
-  become: yes
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    mode: '0600'
 
+# Restart User-GPG agent:
+# > systemctl --user restart gpg-agent.service
 - name: "Restart GPG agent service"
   ansible.builtin.systemd:
     name: gpg-agent.service
     state: restarted
     scope: user
   become: no
+
+# Check if yubikey is working:
+# > gpg --card-status
