@@ -6,7 +6,6 @@
 
 > [!NOTE]
 > [🎮Itch.io](https://paulsenik.itch.io)
-> [📧Mail](mailto:mail@paulsenik.de)
 
 ___
 
