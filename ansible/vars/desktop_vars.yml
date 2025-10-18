@@ -48,6 +48,7 @@ apt_packages__packages:
   # Common Utilities
   - default-jre
   - default-jdk
+  - nfs-common
   - zip
   - tar
   - nmap

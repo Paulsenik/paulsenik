@@ -1,6 +1,6 @@
 {
     "preferences": {
-        "hass_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJlODU1MTljNTlhNmI0M2RkYTM5MjBjNjcyYzU5YjAzOSIsImlhdCI6MTczNjM3MjExMCwiZXhwIjoyMDUxNzMyMTEwfQ.CpokaQr5v8KSU_WpkEg2d-Lj8h1sPE-Wq7rec8lsdgg",
+        "hass_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmZTVmYWY0OWMzNTU0ODYyODRhMGIyYWY5MWYxYmJjMSIsImlhdCI6MTc2MDMwODIxNywiZXhwIjoyMDc1NjY4MjE3fQ.oB-vRKljYcdwW9AjmRMoFBqIkMoTgifWc6HF0nh4WFo",
         "hass_url": "https://smart.seidel-paul.eu"
     },
     "triggers": {
